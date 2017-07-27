@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config version="1.0">
+     <callers>
+        <caller name="AUTHENTICATION">
+            <action name="LOGIN">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="UNSUCCESSFULLY"/>
+                <result_code name="FAILED_USER_NOT_FOUND"/>
+                <result_code name="FAILED_USER_NOT_AUTHENTICATED"/>
+                <result_code name="FAILED_USER_NOT_ACTIVATED"/>
+                <result_code name="FAILED_USER_NOT_ACTIVE"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_WRONG_USER_OR_PASSWORD"/>
+                <result_code name="FAILED_MISSING_VALUES"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="LOGOUT">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="TOKEN_REFRESH">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_TO_OLD"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="LOGIN_BY_TOKEN">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="UNSUCCESSFULLY"/>
+                <result_code name="FAILED_TO_OLD"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="GET_TOKEN">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="HEART_BEAT">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+        <caller name="ACCOUNT">
+            <action name="SETTINGS_SET">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="SETTINGS_GET">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+        <caller name="CHARACTER">
+            <action name="LIST">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="SPAWN">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="INVALID_CHARACTER"/>
+                <result_code name="INVALID_TOKEN"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="DELETE">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="INVALID_CHARACTER"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="CREATE">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="ALREADY_USED"/>
+                <result_code name="LIMIT_REACHED"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="SELECT">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="GUI_CREATE">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="GUI_SELECTION">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="SLOT_STATE">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="TORCH">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="EQUIP_MAIN_HAND">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="SET_POSITION">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="UNSTUCK">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+        <caller name="UNIGINE">
+            <action name="CLOSE">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="UI_ENTER">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+            <action name="UI_LEAVE">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+            <action name="DESTROY_GUI">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+            <action name="CREATE_GUI">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+            <action name="GET_TOKEN">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+            <action name="SET_TOKEN">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+            <action name="SET_GUI_STATE">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+            <action name="GET_GUI_STATE">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+            <action name="LOG_TO_ENGINE">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+            <action name="JSON_EVENT">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+            <action name="AJS_READY">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+            <action name="GET_STATE">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+            <action name="SET_STATE">
+                <result_code name="SUCCESSFULLY"/>
+            </action>
+        </caller>
+        <caller name="LAUNCHER">
+            <action name="VERSION_CHECK">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+        <caller name="CHANNEL">
+            <action name="GET_BY_NAME">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="NOT_FOUND"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="GET_LIST">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="GET_USER_LIST">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="JOIN">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="LEAVE">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="SEND">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="RECEIVE">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="HEARTBEAT">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+        <caller name="SYNC">
+            <action name="TIME_WEATHER">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="SET_TIME">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="GET_TIME">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="SPAWN_RESOURCES">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="DESPAWN_RESOURCES">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="SPAWN_RESOURCES_INIT">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+        <caller name="STORAGE">
+            <action name="GET_DETAILS"> <!-- ID -->
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="SWAP_ITEM"> <!-- ID_SOURCE, ID_TARGET, ID_ITEM -->
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="DESTROY_ITEM"> <!-- ID_ITEM, ID_SOURCE -->
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="STACK"> <!-- ID_ITEM, ID_SOURCE, ID_SLOT -->
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="UNSTACK"> <!-- ID_ITEM, ID_SOURCE, ID_SLOT_SOURCE, ID_SLOT_TARGET, AMOUNT -->
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="ADD"> <!-- ID_ITEM, ID_TARGET -->
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_SLOT_NOT_FREE"/>
+                <result_code name="FAILED_INVALID_STORAGE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="MOVE"> <!-- ID_ITEM, ID_SOURCE, ID_SLOT_SOURCE, ID_SLOT_TARGET -->
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_SLOT_NOT_FREE"/>
+                <result_code name="FAILED_INVALID_STORAGE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="GET_EQUIPPED_BAGS"> <!-- Nothing -->
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="OPEN_BANK"> <!-- ID -->
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+        <caller name="WORLD">
+            <action name="NEW_LOCATION"> <!-- ID -->
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+        <caller name="GATHERING">
+            <action name="UI_RESULT">
+                <result_code name="SUCCESSFULLY"/> <!-- GAME_ID, ITEM_ID, LAYER_ID -->
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="RESULT"> <!-- GAME_ID, ITEM_ID, LAYER_ID, VALUE -->
+                <result_code name="SUCCESSFULLY"/> <!-- Item array in STORAGE_ARRAY -->
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+        <caller name="GATHERING_3D">
+            <action name="MINING_START"> <!-- ID, VALUE, TIME -->
+                <result_code name="SUCCESSFULLY"/> <!-- ITEM, STORAGE_ID, SLOT_ID -->
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="MINING_STOP"> <!-- ID -->
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="CREATE_GUI"> <!-- GAME_ID, ITEM_ID, LAYER_ID, VALUE -->
+                <result_code name="SUCCESSFULLY"/> <!-- Item array in STORAGE_ARRAY -->
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="DESTROY_GUI"> <!-- GAME_ID, ITEM_ID, LAYER_ID, VALUE -->
+                <result_code name="SUCCESSFULLY"/> <!-- Item array in STORAGE_ARRAY -->
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+    </callers>
+    <global_errors>
+        <error name="ERROR_NOT_AUTHENTICATED"/>
+        <error name="ERROR_ACTION_UNKNOWN"/>
+        <error name="ERROR_CALLER_UNKNOWN"/>
+        <error name="ERROR_OBJECT_LOCKED"/>
+        <error name="ERROR_RATE_LIMIT"/>
+        <error name="ERROR_MISC_ERROR"/>
+        <error name="ERROR_SERVER_OFFLINE"/>
+        <error name="ERROR_USER_NOT_AUTHENTICATED"/>
+    </global_errors>
+</config>

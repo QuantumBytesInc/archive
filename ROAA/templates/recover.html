@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+    {% blocktrans %}
+    Account recovery
+    {% endblocktrans %}
+{% endblock title %}
+
+{% block content %}
+    {% blocktrans %}
+    Forgotten password? Problems with your login?
+    Please fill out this form and you will receive an email with further instructions.
+    {% endblocktrans %}
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Set new password" class="btn btn-lg btn-primary btn-block" >
+        </form>
+{% endblock content %}

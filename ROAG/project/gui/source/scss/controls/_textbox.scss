@@ -1,0 +1,71 @@
+@import '../lib/sprites';
+@import '../lib/helper';
+/*  ------------------------------------------------
+    INPUT TEXT
+    ------------------------------------------------  */
+/**
+.sprites { background: url(sprites.png) no-repeat; }
+.textbox { width: 256px; height: 37px; background-position: 0 0; }
+.textbox_disabled { width: 256px; height: 37px; background-position: 0 -38px; }
+.textbox_hover { width: 256px; height: 37px; background-position: 0 -76px; }*/
+$img_textbox: url($amazonUrl + '/img/controls/textbox/textbox_sprite.png');
+textbox {
+  .label {
+    position: fixed;
+  }
+
+  .label.right {
+    float: right;
+    margin-left: 3em;
+    padding-top: 9px;
+  }
+  .label.left {
+    float: left;
+    margin-left: -256px;
+    padding-top: 9px;
+  }
+
+  .input-text {
+    background: $img_textbox 0 0 no-repeat;
+    width: 256px;
+    height: 37px;
+    outline: 0;
+
+    input {
+      margin-left: 2.75em;
+      padding-top: 0.75em;
+      border: 0;
+      background: transparent no-repeat center center;
+      width: 180px;
+      outline: 0;
+    }
+
+  }
+
+    .input-text.hover {
+      width: 256px;
+      height: 37px;
+      background: $img_textbox 0 -76px no-repeat;
+    }
+    .input-text.focus {
+      /*Focus needs to overwrite the hover, cause both classes are applyed.*/
+      width: 256px;
+      height: 37px;
+      background: $img_textbox 0 -76px no-repeat;
+    }
+    .input-text[disabled=disabled]
+    {
+      width: 256px;
+      height: 37px;
+      background: $img_textbox 0 -38px no-repeat;
+    }
+    .input-text.error {
+      width: 256px;
+      height: 37px;
+      background: $img_0041;
+    }
+}
+
+::-webkit-input-placeholder {
+  color: #707070;
+}

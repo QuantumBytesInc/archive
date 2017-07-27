@@ -1,0 +1,41 @@
+<div class="content" ng-controller="supportController" ng-init="init()">
+  <div class="top_img"></div>
+    <div class="bottom_img"></div>
+   <div class="inner">
+       <sidebar></sidebar>
+       <div class="right">
+            <h1>{{pageTitle}}</h1>
+            <div class="formResponse" ng-show="showFormResponse">
+                <h2>{{formResponse.title}}</h2>
+                <p class="subtitle">{{ formResponse.subtitle }}</p>
+            </div>
+            <form ng-hide="showFormResponse" method="POST" id="roa_support_form">
+               <h3>Some information about you</h3>
+                <div class="line">
+                   <div class="block">
+                       <label for="name">Name *</label>
+                       <input ng-model="myFields.name" data-validation="required" type="text" name="NAME" id="name" placeholder="Name">
+                   </div>
+                   <div class="block">
+                       <label for="email">Email *</label>
+                       <input ng-model="myFields.email" data-validation="required" type="text" name="EMAIL" id="email" placeholder="Email">
+                   </div>
+                </div>
+                <h3>Your message</h3>
+                <div class="line">
+                   <div class="block">
+                       <label for="subject">Subject *</label>
+                       <input ng-model="myFields.subject" data-validation="required" type="text" name="SUBJECT" id="subject" placeholder="Subject">
+                   </div>
+                   <div class="block textarea">
+                       <label for="message">Message *</label>
+                       <textarea ng-model="myFields.message" data-validation="required" ng-model="message" type="text" name="MESSAGE" id="message" placeholder="Message">
+                       </textarea>
+                   </div>
+                </div>
+                <hr>
+                <input type="submit" class="animate support" value="Submit my message">
+            </form>
+        </div>
+    </div>
+</div>

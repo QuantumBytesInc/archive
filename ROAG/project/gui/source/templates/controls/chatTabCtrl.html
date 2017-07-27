@@ -1,0 +1,28 @@
+<div data-id="container" class="tab chatwindow"
+     style="position:absolute;top:100px;left:100px; " x-drop-target='true'
+     x-on-drop='drop(dragEl, dropEl,evt)'>
+
+    <div class="resizer">
+        <div class="controlBar">
+            <div class="btn close" ng-click="closeChat()"></div>
+            <div class="btn toggle" ng-click="minimizeChat()"></div>
+
+        </div>
+
+
+        <div class="holder">
+            <!--
+        <span data-id="content" ng-click="test()">
+            {{tabId}}
+        </span>
+        -->
+            <div data-id="tabstrip" class="tabstrip"></div>
+        </div>
+    </div>
+
+    <div  class="jewel"/>
+
+    <div class="black_left"></div>
+    <div class="black_center"></div>
+    <div class="black_right"></div>
+</div>

@@ -1,0 +1,54 @@
+<link href='https://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
+<body style="background-color: black;">
+<div class="location-overlay">
+    <span class="loc">Wyriel Outpost</span>
+    <span class="area">West Weruna</span>
+    <span class="flag"><img src="locationoverlay/faction_holy.png"></span>
+</div>
+</body>
+
+  <style type="text/css">
+
+ .location-overlay {
+
+	width: 650px;
+	height: 350px;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: loc-dsp-anim 5s forwards 1;
+    -webkit-animation-delay: 2s;
+	-webkit-user-select: none;
+	pointer-events: none;
+    visibility: hidden;
+    }
+
+.loc {
+	margin: 3.8rem 11rem;
+	position: absolute;
+	color: rgba(255, 255, 255, 1);
+	font-weight: bold;
+	text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+	font-size: 4em;
+    }
+
+.area {
+	margin: 8rem 11rem;
+	position: absolute;
+	color: rgba(255, 255, 255, 1);
+	text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+	font-size: 3em;
+    }
+
+.flag {
+	position: absolute;
+	-webkit-transform: scale(0.5);
+    }
+
+@-webkit-keyframes loc-dsp-anim {
+  0% 		{	visibility: visible ; opacity: 0; -webkit-transform: scale3d(.8, .8, .8);  		}
+  30%, 70%	{	visibility: visible ; opacity: 1; -webkit-transform: scale3d(1, 1, 1);  		}
+  100%		{	visibility: visible ; opacity: 0; -webkit-transform: scale3d(1.4, 1.4, 1.4);	}
+}
+
+
+  </style>

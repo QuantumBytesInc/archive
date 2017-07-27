@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>certs/ca.pem</file>
+        <file>certs/class2.pem</file>
+    </qresource>
+</RCC>

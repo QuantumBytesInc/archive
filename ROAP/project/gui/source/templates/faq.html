@@ -1,0 +1,24 @@
+<div class="content" ng-controller="faqController" ng-init="init()">
+  <div class="top_img"></div>
+  <div class="bottom_img"></div>
+  <div class="inner">
+    <sidebar></sidebar>
+    <div class="right">
+        <h1>{{pageTitle}}</h1>
+        <div class="faq">
+            <div class="faq-nav-wrapper">
+              <ul class="faq-nav">
+                <li class="faq-point animate" ng-repeat="category in faqs.CATEGORIES" category="{{category.KEY}}">
+                  <a ng-click="navigateToDetailFAQ(category.KEY, 0, category.VALUE);">
+                    <div class="iconImg faqCategory{{category.KEY}}"></div>
+                    <p class="title">{{category.VALUE}}</p>
+                    <div class="arrow animate faq-arrow-right"></div>
+                    <div class="arrow arrow2 animate faq-arrow-right-hover"></div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

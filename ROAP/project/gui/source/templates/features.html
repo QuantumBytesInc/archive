@@ -1,0 +1,31 @@
+<div class="content featureSize" ng-controller="featureController" ng-init="init()">
+  <div class="top_img"></div>
+    <div class="bottom_img"></div>
+   <div class="inner">
+       <sidebar></sidebar>
+       <div class="right big">
+           <div feature-boxes class="feature_list">
+               <ul>
+                   <li class="box" ng-repeat="featureEntry in featureOverview">
+                     <div class="mobile_overlay"></div>
+                     <div>
+                       <div class="overlay">
+                         <!--<a class="standardLinkWrap" ui-sref="featureDetail({featureID: featureEntry.SIBLINGS[0].ID, partID: 1})"></a>
+                         -->
+                         <div class="opener"></div>
+                         <h3>{{featureEntry.TITLE}}</h3>
+                         <div class="siblings">
+                           <a ng-show="siblingEntry.TITLE" ui-sref="featureDetail({featureID: siblingEntry.ID, partID: 1})" ng-repeat="siblingEntry in featureEntry.SIBLINGS.slice(0, 4)">
+                             {{siblingEntry.TITLE}}<br>
+                           </a>
+                         </div>
+                       </div>
+                       <img ng-src="{{featureEntry.IMAGE}}">
+                     </div>
+                   </li>
+                   <hr class="clear">
+               </ul>
+           </div>
+         </div>
+    </div>
+</div>

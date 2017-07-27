@@ -1,0 +1,34 @@
+<div data-id="taskbar" class="taskbar">
+    <div class="icon_torch slot0" ng-class="torch.visible === true ? 'active' : 'inactive'"
+         ng-click="toggleTorch()">
+    </div>
+    <div class="slot inactive slot1"></div>
+    <!-- <div class="icon_pickaxe slot1" ng-class="axe.visible === true ? 'active' : 'inactive'" ng-click="toggleItem('axe')">
+
+     </div>-->
+    <div class="slot inactive slot2">
+
+    </div>
+    <div ng-repeat="(key, value) in storages track by $index" ng-click="toggleStorage(key)"
+         ng-class="storages[key].VISIBLE === true ? 'active' : 'inactive'"
+         class="slot icon_bag {{ 'slot' + ($index+3) }}">
+
+    </div>
+    <div ng-if="storageCount<1" class="slot inactive slot3">
+
+    </div>
+    <div ng-if="storageCount<2" class="slot inactive slot4">
+
+    </div>
+    <div ng-if="storageCount<3" class="slot inactive slot5">
+
+    </div>
+    <div class="icon_chat slot6" ng-class="chat.visible === true ? 'active' : 'inactive'" ng-click="toggleChat()">
+
+    </div>
+    <div class="icon_settings slot7" ng-class="settings.visible === true ? 'active' : 'inactive'"
+         ng-click="toggleSettings()">
+
+    </div>
+
+</div>

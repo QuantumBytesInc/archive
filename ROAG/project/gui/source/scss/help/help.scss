@@ -1,0 +1,100 @@
+@import '../lib/helper';
+$help_background: url($amazonUrl + '/img/help/help_bg.png');
+.view_HELP_VIEW
+{
+  .view_HELP_VIEW_container
+  {
+      background-image:$help_background;
+      background-repeat: no-repeat;
+      width:632px;
+      height:520px;
+    position:relative;
+      .center{
+        margin: 0 auto;
+        display: table;
+        padding-top: 20px;
+      }
+      .text1{
+        display: table;
+        padding-top: 15px;
+        margin-left: 60px;
+        width: 525px;
+      }
+      .text2{
+        display: table;
+        padding-top: 28px;
+        margin-left: 60px;
+        width: 525px;
+      }
+    .text3 {
+        display: table;
+    padding-top: 15px;
+    margin-left: 60px;
+    width: 525px;
+        }
+    /**
+    .text_wasd
+    {
+      margin-top: 15.4em;
+      margin-left: 9.9em;
+      position: absolute;
+      display: table;
+    }
+
+    .text_shift
+    {
+      margin-top: 17.4em;
+      margin-left: 9.9em;
+      position: absolute;
+      display: table;
+    }
+    .text_x
+    {
+       margin-top: 19.8em;
+      margin-left: 9.9em;
+      position: absolute;
+      display: table;
+    }
+
+    .text_esc
+    {
+      margin-top: 15.4em;
+      margin-left: 33em;
+      position: absolute;
+      display: table;
+    }
+    .text_f1
+    {
+      margin-top: 17.4em;
+      margin-left: 33em;
+      position: absolute;
+      display: table;
+    }
+    .dont_show_again
+    {
+      margin-top:  19.3em;
+      margin-left: 31em;
+      position: absolute;
+      display: table;
+    }
+    **/
+
+    .take_me_in
+    {
+      position: absolute;
+      bottom: 44px;
+      width: 632px;
+      text-align:center;
+    }
+
+
+  }
+  .flexAligner-item
+  {
+    .settings
+    {
+        max-width:100%;
+    }
+  }
+
+}

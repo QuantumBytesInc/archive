@@ -1,0 +1,13 @@
+@import '../../../lib/sprites';
+@import '../../../lib/helper';
+$charcreation_bg : $amazonUrl + '/img/state/game/charCreation/charactercreation_bg.png';
+.view_TOPBAR
+{
+  .time {
+    display:block;
+    text-align:center;
+  }
+
+}
+
+

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Categories=Application;Games;
+Terminal=false
+Exec=/usr/bin/ROALauncher
+Name=Relics of Annorath Launcher
+GenericName=Launcher RoA
+Icon=/usr/share/icons/hicolor/48x48/apps/ROALauncher.png
+Comment=Launcher of the Relics of Annorath Game
+

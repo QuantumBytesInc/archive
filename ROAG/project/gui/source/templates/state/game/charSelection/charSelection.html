@@ -1,0 +1,60 @@
+<div class="container">
+        <span class="headline selectionHeadline">
+            CHARACTER SELECTION
+        </span>
+
+    <div class="ui-helper-clearfix"></div>
+    <div class="spacer_top"></div>
+    <div class="characterBoxContainer">
+        <div class="box" ng-class="{selected: character.character == selectedCharacterId}"
+             ng-repeat="character in characters" ng-click="$parent.selectedCharacterId = character.character;$parent.characterSelected();">
+            <div class="avatar">
+                <img ng-click="sendSpawn()" roa-src="img/state/game/charSelection/avatar_temp.png">
+            </div>
+            <div class="information">
+                <div class="name">{{ ::character.nickname }}</div>
+                <div class="ui-helper-clearfix"></div>
+                <div class="region">{{ ::character.location }}</div>
+                <div class="ui-helper-clearfix"></div>
+                <div class="guild">{{ ::character.guild }}</div>
+                <div class="ui-helper-clearfix"></div>
+                <div class="infoStrip">
+                    <div ><span>{{ ::character.messages }}</span><img
+                            roa-src="img/state/game/charSelection/roa_icon_16_message.png"
+                          ></div>
+                    <div ><span>{{ ::character.notification }}</span><img
+                            roa-src="img/state/game/charSelection/roa_icon_16_information.png"
+                            ></div>
+                    <div ><span>{{ ::character.events_important }}</span><img
+                           roa-src="img/state/game/charSelection/roa_icon_16_warning.png"
+                            ></div>
+                    <div ><span>{{ ::character.events_normal }}</span><img
+                            roa-src="img/state/game/charSelection/roa_icon_16_calendar.png"
+                           ></div>
+                </div>
+                <div class="spacerCharSel"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+
+
+        <div class="row1">
+            <img style="margin-left:-0.05em;"
+                 roa-src="img/state/game/charSelection/characterselection_location_martha.png">
+
+        </div>
+        <!--<div class="spacer"></div>-->
+        <div class="row2">
+            <button-icon button-tooltip="Quit game" button-click="quit()" button-class="icon_back"></button-icon>
+            <button-icon button-tooltip="Delete character" button-disabled="selectedCharacterId === 0" button-click="deleteChar()" button-class="icon_delete_char"></button-icon>
+            <button-icon button-tooltip="Create character" button-disabled="characters.length >=3"  button-click="createChar()" button-class="icon_create_char"></button-icon>
+            <button-icon button-tooltip="Join game" button-disabled="selectedCharacterId === 0" button-click="spawnChar()" button-class="icon_proceed"></button-icon>
+
+
+        </div>
+    </div>
+
+
+</div>

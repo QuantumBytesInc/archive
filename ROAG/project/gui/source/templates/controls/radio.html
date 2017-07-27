@@ -1,0 +1,5 @@
+<div ng-repeat="item in values">
+    <input class="radio" id="roa_{{ name }}{{ $index }}" ng-model="$parent.ngModel" type="radio" name="{{ name }}"
+           value="{{ item.value }}" autocomplete="off" ng-change="radioChange()"><label for="roa_{{ name }}{{ $index }}"
+                                                                                        translate="{{ item.label }}"></label>
+</div>

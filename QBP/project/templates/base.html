@@ -1,0 +1,110 @@
+{% load cms_tags staticfiles sekizai_tags meta menu_tags %}
+{% load page_meta_tags %}
+{% page_meta request.current_page as meta %}
+
+<!doctype html>
+<html {% render_block 'html_extra' %}> 
+    <head {% meta_namespaces %}>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="QuantumBytes">
+        <meta name="theme-color" content="#866f73">
+        {% include 'djangocms_page_meta/meta.html' with meta=meta %}
+
+        
+        <link rel="shortcut icon" type="image/png" href="{{STATIC_URL}}img/favicon.png"/>
+        <title>
+            {% block title %}
+                {% page_attribute "page_title" %} - {{ request.site.name }}
+            {% endblock title %}
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        {% render_block "css" %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src=" {% static 'js/js.cookie.js' %} "></script>
+        <script src=" {% static 'js/script.js' %} "></script>
+        {% render_block "js" %}
+    </head>
+    <body>
+      {% cms_toolbar %}
+      <div class="roa_main">
+        <img class="roa_bg" src="{% static 'img/wueste.jpg' %}">
+        <div class="roa_sticky">
+          <header id="header" class="roa_header">
+            <a href="/" id="logo" class="roa_logo">
+              <img src="{% static 'img/qb_logo.png' %}" width="250" height="80">
+            </a>
+            <div id="mobile_navi_button">
+              <img class="burger_img" src="{% static 'img/mobile_burger.png' %}" width="27" height="21"/>
+            </div>
+            <nav id="mobile_navi" style="display:none;">
+              {% load menu_tags %}
+              <ul>
+                {% show_menu 0 100 100 100 %}
+                <hr class="clear">
+              </ul>
+            </nav>
+            <nav id="navi">
+              {% load menu_tags %}
+              <ul>
+                {% show_menu 0 100 100 100 %}
+                <hr class="clear">
+              </ul>
+            </nav>
+            <hr class="clear">
+          </header>
+          <div id="fallback_header"></div>
+
+          <div class="roa_content">
+            {% block content %}{% endblock content %}            
+          </div>
+        </div>
+        <footer id="footer" class="roa_footer">
+          <div class="left elem">
+            <p class="block">
+              <b>QuantumBytes inc.</b><br>
+              773 E El Camino Real 149<br>
+              Sunnyvale, CA 94087<br>
+            </p>
+            <p class="block">
+              Phone: (408) 351 6694<br>
+              Fax: (408) 351 6695<br>
+              <a href="mailto:contact@quantum-bytes.com">contact@quantum-bytes.com</a><br>
+            </p>
+            <div class="block block_social">
+                <div class="social_bar">
+                    <a class="social_link facebook" href="https://www.facebook.com/QuantumBytesInc/" target="_blank">
+                        <img src="{% static 'img/fb_icon.png' %}"/>
+                    </a>
+                    <a class="social_link googleplus" href="https://plus.google.com/+Quantum-bytes" target="_blank">
+                        <img src="{% static 'img/googleplus_icon.png' %}"/>
+                    </a>
+                    <a class="social_link twitter" href="https://twitter.com/QuantumBytes" target="_blank">
+                        <img src="{% static 'img/twitter_icon.png' %}"/>
+                    </a>
+                </div>
+            </div>
+            <hr class="clear">
+          </div>
+          <div class="right elem"></div>
+        </footer>
+
+      </div>
+        
+      <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-92973084-1', 'auto');
+          ga('send', 'pageview');
+      </script>
+    </body>
+    
+</html>

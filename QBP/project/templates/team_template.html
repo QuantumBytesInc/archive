@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load cms_tags staticfiles sekizai_tags menu_tags %}
+
+{% block content %}
+  <h1>{% placeholder "site title" %}</h1>
+  <div class="roa_sub">
+    
+    <div class="team_detail hide">
+        <div class="overview_btn animate">Back to overview</div>
+        <div class="img_wrap">
+            <img alt="Lars" />
+            <div class="color_circle">
+                <p class="title">UI Manager</p>
+            </div>
+        </div>
+        <div class="txt_wrap">
+            <p class="name">Lars Saalbach</p>
+            <p style="" class="description">Wir gestalten, optimieren und implementieren einzigartige User Interface.</p>
+        </div>
+    </div>
+    
+    <div class="team">
+      <div class="inner">
+        {% placeholder "content" %}
+        <hr class="clear">
+      </div>
+    </div>
+  </div>
+{% endblock content %}

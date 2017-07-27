@@ -1,0 +1,36 @@
+@import '../lib/helper';
+.flexAligner-item.settings {
+  max-width: 100%;
+}
+
+.buttonStrip {
+  position: absolute;
+  margin-top: 455px;
+  width: 630px;
+  text-align: center
+}
+
+.view_SETTINGS_MENU {
+  .view_SETTINGS_MENU_container {
+
+    background-image: url($amazonUrl + '/img/settings/settings_bg.png');
+    background-repeat: no-repeat;
+    width: 630px;
+    height: 525px;
+    .tab-content {
+      margin-top: -12px;
+
+      .settingsFullscreenHover:hover
+      {
+          text-shadow: 0 0 1px #7d4022;
+      }
+      .settingsVerticalSyncHover:hover
+      {
+          text-shadow: 0 0 1px #7d4022;
+      }
+
+    }
+
+  }
+
+}

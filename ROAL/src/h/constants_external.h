@@ -1,0 +1,61 @@
+#ifndef CONSTANTS_EXTERNAL_H
+#define CONSTANTS_EXTERNAL_H
+
+namespace GUI
+{
+    namespace Caller
+    {
+        enum
+        {
+            AUTHENTICATION = 1,
+            ACCOUNT = 2,
+            CHARACTER = 3,
+            UNIGINE = 4,
+            LAUNCHER = 5
+        };
+    }
+}
+
+namespace GUI
+{
+    namespace Action
+    {
+        enum
+        {
+            AUTHENTICATION_LOGIN = 0,
+            AUTHENTICATION_LOGOUT = 1,
+            AUTHENTICATION_TOKEN_REFRESH = 2,
+            ACCOUNT_SETTINGS_SET = 0,
+            ACCOUNT_SETTINGS_GET = 1,
+            LAUNCHER_VERSION_CHECK = 0
+        };
+    }
+}
+
+namespace GUI
+{
+    namespace Results
+    {
+        enum
+        {
+            AUTHENTICATION_LOGIN_SUCCESSFULLY = 0,
+            AUTHENTICATION_LOGIN_FAILED_WRONG_USER_OR_PASSWORD = 1,
+            AUTHENTICATION_LOGIN_FAILED_USER_NOT_ACTIVE = 2,
+            AUTHENTICATION_LOGIN_FAILED_BRUTE_FORCE_ATTEMPT = 3,
+            AUTHENTICATION_LOGIN_FAILED_SERVER_DOWN = 4,
+            AUTHENTICATION_LOGIN_FAILED_MAINTENANCE = 5,
+            AUTHENTICATION_LOGIN_FAILED_MISC = 6,
+            AUTHENTICATION_LOGOUT_SUCCESSFULLY = 0,
+            AUTHENTICATION_LOGOUT_FAILED_MISC = 1,
+            AUTHENTICATION_TOKEN_REFRESH_SUCCESSFULLY = 0,
+            AUTHENTICATION_TOKEN_REFRESH_FAILED_MISC = 1,
+            ACCOUNT_SETTINGS_SET_SUCCESSFULLY = 0,
+            ACCOUNT_SETTINGS_SET_FAILED_MISC = 1,
+            ACCOUNT_SETTINGS_GET_SUCCESSFULLY = 0,
+            ACCOUNT_SETTINGS_GET_FAILED_MISC = 1,
+            LAUNCHER_VERSION_CHECK_SUCCESSFULLY = 0,
+            LAUNCHER_VERSION_CHECK_FAILED_MISC = 1
+        };
+    }
+}
+#endif // CONSTANTS_EXTERNAL_H

@@ -1,0 +1,2 @@
+?package(roalauncher):needs="X11|text|vc|wm" section="Applications/see-menu-manual"\
+  title="ROALauncher" command="/usr/bin/ROALauncher"

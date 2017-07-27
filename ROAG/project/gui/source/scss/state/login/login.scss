@@ -1,0 +1,59 @@
+@import '../../lib/helper';
+
+.view_LOGIN_VIEW {
+
+  .loginFooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+  }
+
+  .loginBox {
+    width: 567px;
+    height: 454px;
+    margin: 0 auto;
+  }
+
+  #username {
+    margin-left: 11em;
+    margin-top: 13.85714286em;
+    width: 256px;
+    position: absolute;
+
+    border: 0;
+    outline: 0;
+  }
+
+  #password {
+    margin-left: 11em;
+    margin-top: 17.78571429em;
+    width: 256px;
+    position: absolute;
+
+    border: 0;
+    outline: 0;
+  }
+  #login {
+    position: absolute;
+    margin-top: 21em;
+    margin-left: 12.8em;
+    /* border: 0; */
+    background: 0;
+    width: 200px;
+  }
+
+}
+
+.loginBox {
+  background-image: url($amazonUrl + '/img/state/login/loginscreen_bg.png');
+  animation-name: LoginScreenBg;
+  animation-duration: 8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: LoginScreenBg;
+  -webkit-animation-duration: 8s;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+}

@@ -1,0 +1,14 @@
+django
+uwsgi
+psycopg2
+boto
+importlib
+django-storages-redux
+Collectfast
+django-mama-cas
+django-languages-plus
+django-countries
+django-countries-plus
+lxml
+django-recaptcha2
+-e git+https://github.com/ZuluPro/django-dbbackup.git@benred42-128-Add-Tox#egg=django-dbbackup

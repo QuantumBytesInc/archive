@@ -1,0 +1,86 @@
+@import '../lib/icons';
+
+/*  ------------------------------------------------
+    BUTTON-ICON
+    ------------------------------------------------  */
+
+button-icon {
+
+  .icon_create_char {
+    background: $icon_create_char;
+    width: 72px;
+    height: 75px;
+    display: inline-block;
+  }
+  .icon_create_char:hover {
+    background: $icon_create_char_hover;
+    width: 72px;
+    height: 75px;
+    display: inline-block;
+  }
+
+  .icon_create_char[disabled=disabled] {
+    background: $icon_create_char_disabled;
+    width: 72px;
+    height: 75px;
+    display: inline-block;
+  }
+
+
+
+  .icon_delete_char {
+    background: $icon_delete_char;
+    width: 95px;
+    height: 72px;
+    display: inline-block;
+  }
+  .icon_delete_char:hover {
+    background: $icon_delete_char_hover;
+    width: 95px;
+    height: 72px;
+    display: inline-block;
+  }
+
+
+  .icon_delete_char[disabled=disabled] {
+    background: $icon_delete_char_disabled;
+    width: 95px;
+    height: 72px;
+    display: inline-block;
+  }
+
+
+  .icon_back {
+    background: $icon_back;
+    width: 75px;
+    height: 76px;
+    display: inline-block;
+  }
+  .icon_back:hover {
+    background: $icon_back_hover;
+    width: 75px;
+    height: 76px;
+    display: inline-block;
+  }
+
+  .icon_proceed {
+    background: $icon_proceed;
+   width: 91px;
+    height: 75px;
+    display: inline-block;
+  }
+  .icon_proceed:hover {
+    background: $icon_proceed_hover;
+    width: 91px;
+    height: 75px;
+    display: inline-block;
+  }
+
+  .icon_proceed[disabled=disabled] {
+    background: $icon_proceed_disabled;
+   width: 91px;
+    height: 75px;
+    display: inline-block;
+  }
+
+}

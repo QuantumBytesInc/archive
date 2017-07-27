@@ -1,0 +1,10 @@
+<div class="btn language animate" ng-controller="languageController" ng-init="init()" language-functions>
+    <div class="mobileTouchArea"></div>
+    <span class="txt">Language </span> <span class="defaultLang">{{defaultLanguage}}</span>
+    <div class="icon world_icon" alt="World Icon"></div>
+    <div class="languageBoard">
+      <div class="language" ng-repeat="lang in languages" ng-click="setLanguage(lang.KEY)" ng-class="{'active' : lang.active}">
+        <div class="txt">{{lang.VALUE}}</div><div class="img"><div class="animate flag_{{lang.KEY}}"></div></div>
+      </div>
+    </div>
+</div>

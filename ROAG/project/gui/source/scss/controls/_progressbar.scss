@@ -1,0 +1,54 @@
+@import '../lib/sprites';
+
+/*  ------------------------------------------------
+    PROGRESSBAR
+    ------------------------------------------------  */
+.progress {
+  width: 400px;
+  height: 18px;
+  display: block;
+  -webkit-appearance: none;
+  border: 0;
+  background: $img_0030;
+  box-shadow: inset 0 5px 5px 0 #8b6b23;
+}
+
+.progress-striped .progress-bar {
+
+}
+
+.progress-bar-success {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  height: 14px;
+  float: left;
+  width: 0;
+  text-align: center;
+  background: $img_0031;
+}
+
+.progress-striped .progress-bar-success {
+}
+
+.progress.active .progress-bar {
+}
+
+.progress-bar {
+}
+
+.progress-bar-info {
+}
+
+.progress-striped .progress-bar-info {
+}
+
+.progress-striped .progress-bar-warning {
+}
+
+.progress-bar-danger {
+}
+
+.progress-striped .progress-bar-danger {
+}

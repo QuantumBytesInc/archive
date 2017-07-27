@@ -1,0 +1,16 @@
+<div>
+    <div class="loginFooter">
+        <div class="loginBox">
+            <form name="userForm" novalidate>
+                <div id="username">
+                    <textbox text-model="username"></textbox>
+                </div>
+                <div id="password">
+                    <textbox text-model="password" text-enter="login()" text-type="password"></textbox>
+                </div>
+                <input id="login" ng-click="login()" type="button" value="{{ 'TB_LOGIN' | translate }}"/>
+            </form>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,127 @@
+  @import '../lib/helper';
+
+/*  itembag defines */
+  $items_imagepath: $amazonUrl + "/img/state/game/itembag/";                     /* FIXME: change to path where items really are based  */
+  $itembag_imagepath: $amazonUrl + "/img/state/game/itembag/";
+  $window_controls:$amazonUrl + "/img/state/game/chat/gui_minimize_close.png";   /* FIXME: change to path where global window controls are based */
+
+  /*  graphic related defines */
+  $slotsize: 58px;
+  $slotimgdif: -4 -4;
+
+  /*  itembag defines */
+  $itembag_slots_x: 4;
+  $itembag_slots_y: 5;
+
+
+  /*  layout */
+  .itembag {                                  /* bag grid calculation basis */
+    margin: 21 0 0 19;                        /* position of x0 y0 for item bag grid */
+    width: $slotsize * $itembag_slots_x;      /* size x of bag grid) */
+    height: $slotsize * $itembag_slots_y;      /* size y of bag grid */
+    position: absolute;
+    z-Index: 10;
+    }
+
+  .window {                                   /* bag window (view) */
+    width: 270px;
+    height: 365px;
+    position: absolute;
+    margin: 0 0 0 0;
+    background: url($itembag_imagepath +"itembag_4_5_bg.png")no-repeat;
+    }
+
+   .fillstats {                                   /* bag window (view) */
+    width: 103px;
+    float: right;
+    position: static;
+    margin: 289px -26px 0 0;
+    font-size: small;
+    color: rgb(184, 184, 184);
+    text-shadow: 0 0 3px rgba(184, 184, 184, 1);
+    }
+
+  .close {                                    /* control element close */
+    float: right;
+    position: static;
+    margin-right: 18px;
+    background: url($window_controls)no-repeat -50px 0;
+    width: 23px;
+    height: 30px;
+    z-index: 200;
+    }
+
+  .toggle {
+    float: right;
+    position: static;
+    background: url($window_controls)no-repeat 0 0;
+    width: 22px;
+    height: 30px;
+    z-index: 200;
+    }
+
+  .toggle:hover {
+      background: url($window_controls)no-repeat 0 -50px;
+      }
+
+  .close:hover {
+    background: url($window_controls)no-repeat -50px -50px;
+    }
+
+   .slots:hover {
+    outline: solid rgba(255, 0, 0, 0.38) 10px; /* temporary to make testing easier */
+    outline-offset: -10px;
+    }
+
+   .slots {
+    outline: solid rgba(255, 0, 0, 0) 10px; /* temporary to make testing easier */
+    outline-offset: -10px;
+    -webkit-transition: outline 0.5s;
+    }
+
+    /*  layout end */
+
+
+/* temporary slot controller */
+  /* temporary slot types */
+
+   .aslot1x1 {
+    width: $slotsize * 1;
+    height: $slotsize * 1;
+    position: absolute;
+    z-Index: 11;
+    }
+   .aslot1x2 {
+    width: $slotsize * 1;
+    height: $slotsize * 2;
+    position: absolute;
+    z-Index: 11;
+    }
+   .aslot2x2 {
+    width: $slotsize * 2;
+    height: $slotsize * 2;
+    position: absolute;
+    z-Index: 11;
+    }
+
+/* temporary items */
+
+    /* data input: position x, position y, what item it is */
+    $item1_pos_x: 1; $item1_pos_y: 0; $item1_type: "axe-standard-int.png";
+    $item2_pos_x: 0; $item2_pos_y: 3; $item2_type: "candy1-standard-int.png";
+    $item3_pos_x: 2; $item3_pos_y: 2; $item3_type: "tux1-standard-int.png";
+
+   .item1 {
+    margin: $slotsize * $item1_pos_y $slotsize * $item1_pos_x;      /* slot size * item position = position graphical*/
+    background: url($items_imagepath + $item1_type) $slotimgdif;    /* background graphic and slot image difference (image without border) */
+    }
+
+   .item2 {
+    margin: $slotsize * $item2_pos_y $slotsize * $item2_pos_x;
+    background: url($items_imagepath + $item2_type) $slotimgdif;
+    }
+
+   .item3 {
+    margin: $slotsize * $item3_pos_y $slotsize * $item3_pos_x;
+    background: url($items_imagepath + $item3_type) $slotimgdif;
+    }

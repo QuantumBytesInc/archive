@@ -1,0 +1,58 @@
+# Maintainer: Tobias Trabelsi <Tobias.Trabelsi@quantum-bytes.com>
+
+pkgname=roa-launcher-git
+pkgver=1.0
+pkgrel=1
+pkgdesc='Launcher for the Relics of Annorath Game by Quantum Bytes'
+arch=('i686' 'x86_64')
+url='https://www.annorath-game.com/'
+license=('custom')
+depends=('qt5-base' 'openssl' 'icu' 'libtorrent-rasterbar' 'sfml')
+makedepends=('git' 'boost')
+provides=('roa-launcher' 'roa-launcher-git')
+conflicts=('roa-installer' 'roa-installer-git' 'roa-launcher')
+options=('!strip')
+source=('git+https://github.com/QuantumBytesInc/ROAL.git')
+sha256sums=('SKIP')
+
+_gitroot='https://github.com/QuantumBytesInc/ROAL.git'
+_gitname='ROAL'
+
+build() {
+  cd "$srcdir"
+  msg "Connecting to GIT server...."
+
+  if [[ -d "$_gitname" ]]; then
+    cd "$_gitname" && git pull origin master
+    msg "The local files are updated."
+  else
+    git clone "$_gitroot" "$_gitname"
+  fi
+
+  msg "GIT checkout done!"
+  msg "Starting build..."
+
+  rm -rf "$srcdir/$_gitname-build"
+  git clone "$srcdir/$_gitname" "$srcdir/$_gitname-build"
+  cd "$srcdir/$_gitname-build"
+
+  qmake -spec linux-g++ CONFIG+=release CONFIG+=qml_release -o Makefile ROALauncher.pro
+  qmake
+  msg "qmake done"
+  make -j$(nproc)
+  msg "make done"
+}
+
+package() {
+  cd "$srcdir/$_gitname-build"
+  install -d "${pkgdir}/usr/share/roal"
+  install -Dm755 "ROALauncher" "${pkgdir}/usr/share/roal"
+
+  install -Dm755 "${srcdir}/ROAL/arch/roalauncher.sh" "${pkgdir}/usr/bin/roalauncher"
+
+  install -Dm644 "${srcdir}/ROAL/arch/roa-launcher.desktop" "${pkgdir}/usr/share/applications/roa-launcher.desktop"
+
+  install -Dm644 "${srcdir}/ROAL/resources/images/icon.png" "${pkgdir}/usr/share/icons/RoA.png"
+}
+
+# vim: ts=2 sw=2 et:

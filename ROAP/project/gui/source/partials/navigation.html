@@ -1,0 +1,132 @@
+<nav class="navi" ng-controller="navigationController" ng-init="init()">
+    <div class="mobile_burger"></div>
+    <!--
+    <div class="mobile_lang">
+        <span class="txt">DE</span>
+        <span class="txt">EN</span>
+        <span class="txt">FR</span>
+        <span class="txt">RU</span>
+        <span class="txt">IT</span>
+        <img class="allLangs" src="{{guiURL}}img/language.png" alt="Language Icon">
+    </div>
+ -->
+ <div class="mobile_lang" >
+   <span class="txt" ng-repeat="lang in languages" ng-click="setLanguage(lang.KEY)" >
+     {{lang.VALUE}}
+   </span>
+ </div>
+<div class="destkopNav">
+
+      <ul class="left desktop">
+          <li ng-class="{act : $state.includes('game')}">
+            <a href="/game/">Game</a>
+          </li>
+          <li ng-class="{act : ($state.includes('news') || $state.includes('newsDetail'))}">
+            <a href="/news/">News</a>
+          </li>
+          <li ng-class="{act : ($state.includes('features') || $state.includes('featureDetail'))}">
+            <a href="/features/">Features</a>
+          </li>
+          <li class="inactive"> <a class="disabled" href="/lore/">Lore</a></li>
+          <hr class="clear">
+      </ul>
+      <!--<ul class="left desktop">
+        <li ng-repeat="entry in navigationEntries | limitTo:4">
+          <a href="/#{{entry.name}}">{{entry.name}}</a>
+        </li>
+        <hr class="clear">
+      </ul>-->
+
+      <ul class="right desktop">
+          <li class="inactive"><a class="disabled" href="/">Dev</a></li>
+          <li><a target="_blank" href="https://forum.annorath-game.com/">Forum</a></li>
+          <li class="inactive"><a class="disabled" href="/status/">Status</a></li>
+          <li ng-class="{act : ($state.includes('faq') || $state.includes('faqDetail') || $state.includes('support') || $state.includes('profile') )}">
+             <a href="/about/" onclick="return false;">About</a>
+              <ul>
+                  <li ng-class="{act : ($state.includes('faq') || $state.includes('faqDetail') )}">
+                    <a href="/faq/">FAQ</a>
+                  </li>
+                  <li class="inactive">
+                    <a class="disabled" href="/">Support</a>
+                  </li>
+                  <li class="inactive">
+                    <a class="disabled" href="/">Information</a>
+                  </li>
+                  <li class="inactive">
+                    <a class="disabled" href="/">Media</a>
+                  </li>
+                  <li class="inactive">
+                    <a class="disabled" href="/">Press</a>
+                  </li>
+                  <li class="inactive">
+                    <a class="disabled" href="/">Hub</a>
+                  </li>
+              </ul>
+          </li>
+          <hr class="clear">
+      </ul>
+      <!--<ul class="right desktop">
+          <li ng-repeat="entry in navigationEntries" ng-if="$index > 3">
+            <a href="#{{entry.name}}">{{entry.name}}</a>
+            <ul ng-if="entry.subnav">
+              <li ng-repeat="subentry in entry.subnav">
+                <a href="#{{subentry.name}}">{{subentry.name}}</a>
+              </li>
+            </ul>
+          </li>
+          <hr class="clear">
+      </ul>-->
+  </div>
+    <ul class="mobile_nav">
+        <li ng-class="{act : $state.includes('game')}">
+          <a href="/">Game</a>
+        </li>
+        <li ng-class="{act : ($state.includes('news') || $state.includes('newsDetail') )}">
+          <a href="/news/">News</a>
+        </li>
+        <li ng-class="{act : ($state.includes('features') || $state.includes('featureDetail') )}">
+          <a href="/features/">Features</a>
+        </li>
+        <li class="inactive">
+          <a class="disabled" href="/">Lore</a>
+        </li>
+        <li class="inactive">
+          <a class="disabled" href="/">Dev</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://forum.annorath-game.com/">Forum</a>
+        </li>
+        <li class="inactive">
+          <a class="disabled" href="/">Status</a>
+        </li>
+        <li ng-class="{act : ($state.includes('faq') || $state.includes('faqDetail') || $state.includes('support') || $state.includes('profile') )}">
+            <div class="arrow animate mobile_arrow_down" alt="Mobile Down Arrow"></div>
+            <a href="/" onclick="return false;">About</a>
+            <ul>
+                <li ng-class="{act : ($state.includes('faq') || $state.includes('faqDetail') )}">
+                  <a href="/faq/">FAQ</a>
+                </li>
+                <li class="inactive">
+                  <a class="disabled" href="/">Support</a>
+                </li>
+                <li class="inactive">
+                  <a class="disabled" href="/">Information</a>
+                </li>
+                <li class="inactive">
+                  <a class="disabled" href="/">Media</a>
+                </li>
+                <li class="inactive">
+                  <a class="disabled" href="/">Press</a>
+                </li>
+                <li class="inactive">
+                  <a class="disabled" href="/">Hub</a>
+                </li>
+            </ul>
+        </li>
+        <hr class="clear">
+    </ul>
+    <a class="logo" href="/game/">
+      <div class="img_logo" alt="Logo"></div>
+    </a>
+</nav>

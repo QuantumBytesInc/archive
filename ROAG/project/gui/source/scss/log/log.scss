@@ -1,0 +1,34 @@
+@import '../lib/helper';
+.flexAligner-item.settings {
+  max-width: 100%;
+}
+
+.view_LOG_VIEW {
+  .view_LOG_VIEW_container {
+
+    background-image: url($amazonUrl + '/img/log/log_bg.png');
+    background-repeat: no-repeat;
+    width: 630px;
+    height: 525px;
+    .tab-content {
+      margin-top: -12px;
+
+      .settingsFullscreenHover:hover {
+        text-shadow: 0 0 1px #7d4022;
+      }
+      .settingsVerticalSyncHover:hover {
+        text-shadow: 0 0 1px #7d4022;
+      }
+
+    }
+
+    .buttonStrip {
+      position: absolute;
+      margin-top: 455px;
+      width: 630px;
+      text-align: center
+    }
+
+  }
+
+}

@@ -1,0 +1,60 @@
+Relics of Annorath Launcher
+====
+
+1. Prerequisites
+
+- qt5
+- openssl
+
+2. Compile
+
+- qmake -project
+- qmake
+- make
+
+3. Installtion
+
+Just run the file
+
+====
+
+Windows (MSVC2012):
+
+- OpenSSL:
+	# x64 
+	perl Configure VC-WIN64A no-asm 
+	ms\do_win64a 
+	# x86 
+	perl Configure VC-WIN32 no-asm 
+	ms\do_nasm 
+	# Both 
+	nmake -f ms\nt.mak 
+	nmake -f ms\nt.mak test 
+
+- qt5
+	# x64 
+	set PATH=%PATH%;c:\buildenv\GnuWin32\bin;c:\buildenv\python;E:\static\x64\openssl\out32 
+	set INCLUDE=%INCLUDE%;E:\static\x64\openssl\inc32 
+	set LIB=%LIB%;E:\static\x64\openssl\out32 
+	set OPENSSL_LIBS="-LE:\static\x64\openssl\out32 -libeay32 -ssleay32"  
+	# x86 
+	set PATH=%PATH%;c:\buildenv\GnuWin32\bin;c:\buildenv\python;E:\static\x86\openssl\out32 
+	set INCLUDE=%INCLUDE%;E:\static\x86\openssl\inc32 
+	set LIB=%LIB%;E:\static\x86\openssl\out32 
+	set OPENSSL_LIBS="-LE:\static\x86\openssl\out32 -libeay32 -ssleay32"  
+	set CL=/MP  
+	configure -release -opensource -nomake examples -mp -openssl-linked -static -opengl desktop
+
+	Note: https://bugreports.qt-project.org/browse/QTBUG-34390
+
+Linux:
+
+- OpenSSL:
+	./config  no-shared
+	make
+	make install
+
+- qt5
+	OPENSSL_LIBS="-L/usr/local/ssl/lib -lssl -lcrypto" ./configure -release -opensource -nomake examples -openssl-linked -static -opengl desktop -qt-xcb -qt-libjpeg -qt-libpng  -no-gif -qt-zlib -fontconfig
+
+Note: http://qt-project.org/wiki/Building_Qt_5_from_Git

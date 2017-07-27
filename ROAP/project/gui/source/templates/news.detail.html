@@ -1,0 +1,21 @@
+<div class="content" ng-controller="newsDetailController" ng-init="init()">
+  <div class="top_img"></div>
+    <div class="bottom_img"></div>
+   <div class="inner">
+       <sidebar></sidebar>
+       <div class="right">
+            <h1><div class="backButton" ng-click="navigateBackToList()"></div>{{newsSingleEntry.TITLE}}</h1>
+            <div news-functions class="news_list">
+              <div class="news">
+                  
+                  <span class="time"><span class="creator">{{newsSingleEntry.CREATOR}}</span> am {{newsSingleEntry.CREATED_TIME}}</span>
+                  <div class="txt">
+                    <div class="wholeText" ng-bind-html="newsSingleEntry.TEXT"></div>
+                    <a ui-sref="news" class="less btn animate">Back</a>
+                  </div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+</div>

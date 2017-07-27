@@ -1,0 +1,95 @@
+@import '../lib/helper';
+/*  ------------------------------------------------
+    CHECKBOX BUTTON
+    ------------------------------------------------  */
+/*
+.sprites { background: url(sprites.png) no-repeat; }
+.checkbox { width: 17px; height: 17px; background-position: 0 0; }
+.checkbox_checked { width: 17px; height: 17px; background-position: 0 -18px; }
+.checkbox_checked_disabled { width: 17px; height: 17px; background-position: 0 -36px; }
+.checkbox_checked_hover { width: 17px; height: 17px; background-position: 0 -54px; }
+.checkbox_disabled { width: 17px; height: 17px; background-position: 0 -72px; }
+.checkbox_hover { width: 17px; height: 17px; background-position: 0 -90px; }*/
+
+$img_checkbox: url($amazonUrl + '/img/controls/checkbox/checkbox_sprite.png');
+
+input[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+  filter: alpha(opacity=0);
+  margin: 5px 0 0 5px
+}
+
+ input[type="checkbox"]:focus + label {
+
+}
+
+input[type="checkbox"] + label {
+  background: $img_checkbox 0 0 no-repeat;
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 25px;
+  cursor: pointer;
+  line-height: 17px;
+  min-height: 17px;
+  display: inline-block;
+  z-index: 0
+}
+
+input[type="checkbox"] + label {
+  background: $img_checkbox 0 0 no-repeat;
+}
+
+
+
+input[type='checkbox']:checked + label {
+  background: $img_checkbox 0 -18px no-repeat;
+}
+
+
+
+input[type='checkbox']:disabled + label {
+  background: $img_checkbox 0 -72px no-repeat;
+opacity:0.4;
+}
+
+
+
+input[type='checkbox']:disabled:checked + label {
+  background: $img_checkbox 0 -36px no-repeat;
+  opacity:0.4;
+}
+
+
+
+//Hovered state
+input[type=checkbox]:hover + label,
+input[type=checkbox] + label:hover {
+   background: $img_checkbox  0 -90px no-repeat;
+  text-shadow: 0 0 1px #7d4022;
+}
+
+//Hovered state
+input[type=checkbox]:checked:hover + label,
+input[type=checkbox] + label:checked:hover {
+   background: $img_checkbox  0 -54px no-repeat;
+  text-shadow: 0 0 1px #7d4022;
+}
+
+//Hovered state
+input[type=checkbox]:disabled:checked:hover + label,
+input[type=checkbox] + label  {
+   background: $img_checkbox  0 -36px no-repeat;
+text-shadow: none;
+}
+
+
+//Hovered state
+input[type=checkbox]:disabled:hover + label,
+input[type=checkbox] + label {
+    background: $img_checkbox 0 -72px no-repeat;
+  text-shadow: none;
+}
+
+
+

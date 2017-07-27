@@ -1,0 +1,275 @@
+@import '../../../lib/helper';
+.view_CHAT {
+  .chatDropZone {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    }
+
+  /* chat controller */
+  chat-tab-ctrl .chatwindow {
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    }
+  .ui-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    z-index: 99999;
+    display: block;
+    }
+  chat-tab-ctrl .resizer {
+    width: 380px;
+    height: 240px;
+    color: black;
+    resize: both;
+    overflow: auto;
+    -webkit-border-image: url($amazonUrl + '/img/state/game/chat/border.png') 8 8 round;
+    border-width: 9px;
+    box-shadow: 0px 0px 10px black;
+    background: url($amazonUrl + '/img/state/game/chat/dirt_left_top.png') no-repeat left top, url($amazonUrl + '/img/state/game/chat/dirt_right_top.png') no-repeat right top, url($amazonUrl + '/img/state/game/chat/dirt_right_bottom.png') no-repeat right bottom, url($amazonUrl + '/img/state/game/chat/dirt_left_bottom.png') no-repeat left bottom, url($amazonUrl + '/img/state/game/chat/chat_bg.png');
+    }
+  chat-tab-ctrl .holder {
+    position: relative;
+    height: calc(100% - 22px);
+    width: calc(100% - 10px);
+    }
+  chat-tab-ctrl .controlBar {
+    height: 30px;
+    position: absolute;
+    right: 0.5em;
+    top: -0.7em;
+    z-index: 300;
+    }
+  chat-tab-ctrl .tabstrip {
+    height: calc(100% - 35px);
+    }
+  chat-tab-ctrl .controlBar h2 {
+    font-size: 18px;
+    margin: 0;
+    padding: 5px;
+    }
+  chat-tab-ctrl .controlBar .btn {
+    float: right;
+    }
+  chat-tab-ctrl .close {
+    background: url($amazonUrl + "/img/state/game/chat/gui_minimize_close.png")no-repeat -50px 0;
+    width: 23px;
+    height: 30px;
+    }
+  chat-tab-ctrl .toggle {
+    background: url($amazonUrl + "/img/state/game/chat/gui_minimize_close.png")no-repeat 0 0;
+    width: 22px;
+    height: 30px;
+    }
+  chat-tab-ctrl .close:hover {
+    background: url($amazonUrl + "/img/state/game/chat/gui_minimize_close.png")no-repeat -50px -50px;
+    }
+  chat-tab-ctrl .toggle:hover {
+    background: url($amazonUrl + "/img/state/game/chat/gui_minimize_close.png")no-repeat 0 -50px;
+    }
+  chat-tab-ctrl {
+    display: block;
+    }
+  chat-tab-ctrl .jewel {
+    position: absolute;
+    left: 50%;
+    margin-left: -46px;
+    margin-top: -7px;
+    background-image: url($amazonUrl + "/img/state/game/chat/jewel.png");
+    height: 38px;
+    width: 92px;
+    }
+  chat-tab-ctrl .black_left {
+    position: absolute;
+    margin-top: -15px;
+    z-index: -99;
+    background: url($amazonUrl + "/img/state/game/chat/black_left.png");
+    width: 50%;
+    height: 26px;
+    }
+  chat-tab-ctrl .black_right {
+    position: absolute;
+    right: 0;
+    margin-top: -15px;
+    z-index: -99;
+    background: right url($amazonUrl + "/img/state/game/chat/black_right.png");
+    width: 50%;
+    height: 26px;
+    }
+  chat-tab-ctrl .black_center {
+    position: absolute;
+    margin-left: -85px;
+    margin-top: -11px;
+    z-index: -98;
+    background: url($amazonUrl + "/img/state/game/chat/black_center.png");
+    left: 50%;
+    width: 167px;
+    height: 43px;
+    }
+  chat-tab-ctrl .dirt {
+    width: 100%;
+    height: 100%;
+    background: blue;
+    }
+  chat-tab-ctrl .controlBar, chat-tab-ctrl .holder {
+    }
+  p.chattext {
+    line-height: 20px;
+    display: inline;
+    font-style: italic;
+    }
+  p.chattext:before {
+    content: " > ";
+    }
+  span.timestamp {
+    margin-right: 5px;
+    }
+  span.username {
+    color: #124c0f
+    }
+
+  /* tab */
+  chat-tab {
+    display: inline-block;
+    }
+  chat-tab .title {
+    margin: 0;
+    float: left;
+    display:none;
+    }
+  chat-tab.active .title {
+    color: #5F3716;
+    }
+  chat-tab .title h2 {
+    margin: 0;
+    display: block;
+    float: left;
+    margin-top: 3px;
+    padding: 4px;
+    }
+  chat-tab .title .close {
+    padding: 10px;
+    display: block;
+    float: left;
+    }
+  chat-tab .title .close:hover {
+    background: #DEEABB;
+    }
+  chat-tab .interaction {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    height: calc(100% - 10px);
+    }
+  chat-tab .table {
+    display: table;
+    height: 100%;
+    width: 100%;
+    }
+  chat-tab .messages {
+    display: table-cell;
+    width:100%;
+     .history {
+      height: 100px;
+      background: rgba(255, 255, 255, 0.09);
+      overflow-y: scroll;
+      resize: none;
+      height: 100%;
+
+       .msg
+       {
+         word-break:break-all;
+         }
+      }
+     .historytext {
+      margin-left: 5px;
+      margin-top: 5px;
+      margin-right: 5px;
+      margin-bottom: 12px;}
+    }
+
+  chat-tab .users {
+    display: block;
+    width:100px;
+    font-weight: bold;
+    font-size: small;
+    height: calc(100% + -0px);
+    overflow:hidden;
+    resize:none;
+    }
+  chat-tab .users .user {
+    }
+  chat-tab .usercontainer {
+    padding-left: 5px;
+    padding-top: 5px;
+    }
+    
+  chat-tab .users .user .online {
+    color: #124c0f;
+    text-align: right;
+    }
+
+  chat-tab .sendbar {
+    background: url($amazonUrl + "/img/state/game/chat/h_ruler.png") repeat-x left top;
+    display: table;
+    width: calc(100% - +3px);
+    }
+  chat-tab .sendbar input {
+    width: calc(100% - 100px);
+    resize: none;
+    padding: 5px;
+    display: table-cell;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url($amazonUrl + "/img/state/game/chat/chat_input_bg.png") repeat-x left top;
+    color: black;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    line-height: 20px;
+    display: inline;
+    font-style: italic;
+    }
+  chat-tab .sendbar input::-webkit-input-placeholder {
+    color: black;
+    }
+
+  chat-tab .sendbar button {
+    background: url($amazonUrl + "/img/state/game/chat/v_ruler.png") repeat-y left top;
+    border: none;
+    font-size: 15px;
+    font-weight: 900;
+    box-sizing: border-box;
+    width: 100px;
+    display: table-cell;
+    padding: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+  chat-tab .sendbar button:hover {
+    cursor: pointer;
+    color: #5F3716
+    }
+  chat-tab .sendbar button:focus,
+  chat-tab .sendbar button:active {
+    outline: none;
+    }
+
+  ::-webkit-scrollbar {
+    height: 100%;
+    width: 3px;
+    background: url($amazonUrl + "/img/state/game/chat/v_ruler.png") repeat-y left top;
+    }
+  ::-webkit-scrollbar-thumb {
+    background: #99611E;
+    -webkit-box-shadow: 0px 1px 2px black;
+    }
+  ::-webkit-scrollbar-corner {
+    background: url($amazonUrl + "/img/state/game/chat/v_ruler.png") repeat-y left top;
+    height: 5px;
+    }
+  }

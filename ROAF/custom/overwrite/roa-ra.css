@@ -1,0 +1,18 @@
+body {}
+
+  .profile-avatar { width: 200px; height: 200px; background: #56370E; border-radius: 50%; padding: 3px; box-shadow: 0 0px 5px rgba(86, 55, 14, 0.49); border-radius: 100px;}
+  .profile-username { margin-top: 7px;}
+  .tab-link.is-selected { color: #1c1c1c; border-bottom: #7B5017 4px solid;}
+  .field input[type="checkbox"] {margin-bottom: 0;	-webkit-appearance: none;  background-color: #F1E9D6; border: 1px solid #9E6F49; box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05); padding: 10px; border-radius: 0; display: inline-block; position: relative;}
+  .field input[type="checkbox"]:checked {background-color: #fafafa;border: 1px solid #AD7045; box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);color: #99a1a7;}
+  .field input[type="checkbox"]:checked:after { content: '\2716'; font-size: 14px; position: absolute; top: 0px; left: 4px; color: #B76747;}
+  .field input[type="checkbox"]:focus {outline: 0; box-shadow: 0 0 10px black; box-shadow: 0 0 8px rgba(62, 31, 5, 0.15); border-color: #B14B23;}
+
+  .side-menu li { background: url("../images/roa/subnavi_tile.jpg"); padding: 5px 0; -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.8); border-top: 1px solid rgba(255,255,255,.1);}
+
+
+  a i.fa.fa-cogs,
+  a:active i.fa.fa-cogs,
+  a:hover i.fa.fa-cogs,
+  a:visited i.fa.fa-cogs
+  {background-color: rgb(123, 80, 23); color: rgb(241, 235, 226); font-size: 20px; padding: 8px; }

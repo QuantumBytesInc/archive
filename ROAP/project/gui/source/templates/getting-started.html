@@ -1,0 +1,48 @@
+<div class="content gettingStarted" ng-controller="gettingStartedController" ng-init="init()">
+    <div class="top_img"></div>
+    <div class="bottom_img"></div>
+    <div class="inner">
+        <sidebar></sidebar>
+        <div class="right">
+          <h1>{{pageTitle}}</h1>
+          <div class="block">
+            <h2>Join the community</h2>
+            <p>Join us on the <a href="https://forum.annorath-game.com/" target="_blank">Relics of Annorath forum</a>!</p>
+          </div>
+          <hr>
+          <div class="block launcher_block">
+            <h2>Get the launcher</h2>
+            <div class="line">
+              <img class="icon" src="{{guiURL}}img/linux_icon.png">
+              <p><a href="#">Linux 64-Bit</a></p>
+              <hr class="clear">
+            </div>
+            <div class="line">
+              <img class="icon" src="{{guiURL}}img/windows_icon.png">
+              <p><a href="#">Windows XP/Vista/7/8 64-Bit</a></p>
+              <hr class="clear">
+            </div>
+          </div>
+          <hr>
+          <div class="block">
+            <h2>Install instructions</h2>
+            <b>Windows</b>
+            <ul>
+                <li>Install <a href="http://www.microsoft.com/de-de/download/details.aspx?id=30679" target="_blank">Visual C++ Redistributable</a></li>
+                <li>Run the Relics of Annorath installer</li>
+            </ul>
+            <b>For troubleshooting look <a href="https://forum.annorath-game.com/" target="_blank">here</a>!</b>
+          </div>
+          <div class="block">
+            <b>Linux</b>
+            <ul>
+                <li>Install libopenal</li>
+                <li>Create the directory /usr/local/Qt-5.0.0/lib/fonts</li>
+                <li>Run the Relics of Annorath installer</li>
+            </ul>
+            <b>For troubleshooting look <a href="https://forum.annorath-game.com/" target="_blank">here</a>!</b>
+          </div>
+        </div>
+        <hr class="clear">
+    </div>
+</div>

@@ -1,0 +1,138 @@
+@import 'lib/fonts';
+@import 'lib/sizes';
+@import 'lib/helper';
+
+.view_LOGIN_VIEW {
+  width: $appWidth;
+  height: $appHeight;
+
+}
+
+.view_SETTINGS_MENU {
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  width: $controlWidth;
+  height: $controlHeight;
+  position: absolute;
+  background-color: $fadeOut-background-color;
+}
+
+.view_LOG_VIEW {
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: $controlWidth;
+  height: $controlHeight;
+  position: absolute;
+  background-color: $fadeOut-background-color;
+}
+
+.view_ESC_MENU {
+  /** u shall not pass.**/
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: $controlWidth;
+  height: $controlHeight;
+  position: absolute;
+  background-color: $fadeOut-background-color;
+}
+
+.view_HELP_VIEW {
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: $controlWidth;
+  height: $controlHeight;
+  position: absolute;
+  background-color: $fadeOut-background-color;
+}
+
+.view_CHAT {
+  /*CHAT DONT HAVE ZINDEX!*/
+  top: 0;
+  left: 0;
+  width: $appWidth;
+  height: $appHeight;
+  position: absolute;
+  overflow: hidden;
+
+}
+
+.view_TEMPORARY_VIEW {
+
+  z-index: 9;
+  width: $controlWidth;
+  height: $controlHeight;
+  position: absolute;
+  background-color: $fadeOut-background-color;
+}
+
+.view_CHAR_SELECTION {
+  z-index: 9;
+  position: absolute;
+  top: 50%;
+  /*Height of the child element*/
+  margin-top: -265px;
+}
+
+.view_CHAR_CREATION {
+  z-index: 9;
+  /*width: 100vw;*/
+  /*height: 100vh;*/
+  position: absolute;
+  /*background-color: rgba(255, 255, 255, 0.7);*/
+  top: 50%;
+  /*Height of the child element*/
+  margin-top: -265px;
+}
+
+.view_TOPBAR {
+  z-index: 10;
+  top: 0;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.view_OVERLAY {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 501;
+  pointer-events:none;
+}
+
+.view_INFORMATION {
+ /* margin: auto;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 4rem;
+  z-index: 10001;
+  font-size: 4rem;
+  pointer-events:none;*/
+  pointer-events:none;
+  top:0;
+  right:0;
+  z-index:10001;
+  position:absolute;
+}
+
+.view_GATHERING_MINING
+{
+  pointer-events:none;
+  display: block;
+  width: 488px;
+  height: 51px;
+  position: absolute;
+  left: 50%;
+  /*Set the view above the taskbar.*/
+  bottom: 30%;
+  margin-left: -244px;
+  z-index: 102;
+}

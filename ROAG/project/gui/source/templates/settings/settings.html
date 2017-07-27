@@ -1,0 +1,244 @@
+<link rel="stylesheet" ng-href="" preload-scope/>
+<div class="flexAligner">
+<div class="flexAligner-item">
+<div class="view_SETTINGS_MENU_container">
+<div class="buttonStrip">
+
+    <button-text button-click="default()" button-label="DEFAULT"></button-text>
+    <span style="padding-left:5px"></span>
+    <button-text button-click="save()" button-label="TB_ACCEPT"></button-text>
+    <span style="padding-left:5px"></span>
+    <!--<button-text button-click="apply()" button-label="TB_APPLY"></button-text>
+    <span style="padding-left:5px"></span>-->
+    <button-text button-click="close()" button-label="TB_CLOSE"></button-text>
+
+</div>
+<div style="padding-top:75px;margin-left:50px">
+
+<!--  Tab content -->
+<tabset justified="true">
+
+<tab heading="Video">
+
+    <!-- DESCRIPTION CONTAINER -->
+    <div class='text' style="width:420px;height:30px;margin-left: -10px;">You can select a
+        predefined profile or customize settings below:
+    </div>
+
+
+    <!-- PROFILE -->
+    <div class='settingstabtopleft'
+         style="height: 30px;margin-left: 0px;float: left;display:table;">
+
+        <radio ng-model="profiles.selectedValue" radio-name="profiles.name" radio-values="profile"
+               radio-change="profilesChange(_value)"></radio>
+    </div>
+
+    <!-- GENERAL GRAPHICS -->
+    <div class='settingstabtopright' style="width: 310px;margin-right:15px;height: 30px;float: right;display:table;">
+
+        <div class="settingsFullscreenHover" >
+             <span  style="padding-left: 22px;">Fullscreen</span>
+            <checkbox checkbox-checked="globals.fullscreen" checkbox-change="changed()"
+                      checkbox-label=""  style="margin-left: 0.4em;vertical-align: sub;">
+            </checkbox>
+        </div>
+        <div class="settingsVerticalSyncHover"  >
+            <span style="padding-left: 7px;">Vertical Sync</span>
+            <checkbox checkbox-checked="globals.vsync" checkbox-change="changed()"
+                      checkbox-label="" style="margin-left: 0.4em;vertical-align: sub;">
+            </checkbox>
+        </div>
+        <div style="float:right">
+            <drop-down class="medium" ddl-values="resolution" ddl-change="resolutionChange(_key,_value)"
+                       dropdown-label="Resolution" dropdown-label-position="left"></drop-down>
+        </div>
+         <div ng-show="showCustomResolution">
+            <span style="padding-left: 22px;">Custom Resolution</span>  <input type="text" style="width:50px;background-color: rgba(213,182,115,1);border: 0;text-align: center;" ng-model="globals.width"/>X<input type="text" style="width:50px;background-color: rgba(213,182,115,1);border: 0;text-align: center;"  ng-model="globals.height"/>
+        </div>
+        <div style="float:right">
+            <drop-down class="medium" ddl-values="sfx"
+                       dropdown-label="SFX Mode" dropdown-label-position="left"></drop-down>
+        </div>
+    </div>
+    <div class="ui-helper-clearfix"></div>
+    <div class='hruler'
+         style="width: 596px;height: 8px;margin-left: -40px;background-repeat: no-repeat" roa-background-image="img/hr_ruler1.png"></div>
+    <div class="ui-helper-clearfix"></div>
+    <div class='settingstabbottomleft'
+         style="margin-top: 10px; display: table;float: left;">
+        <div style="margin-bottom: 9px;">
+            <checkbox ng-disabled="profilesDisabled" checkbox-checked="reflection.checked"
+                      checkbox-change="checkProfile()" checkbox-label="Dynamic reflection"></checkbox>
+        </div>
+        <div style="margin-bottom: 9px;">
+            <checkbox ng-disabled="profilesDisabled" checkbox-checked="parallax.checked"
+                      checkbox-change="checkProfile()" checkbox-label="Parallax occlusion"></checkbox>
+        </div>
+        <div style="margin-bottom: 9px;">
+            <checkbox ng-disabled="profilesDisabled" checkbox-checked="motion_blur.checked"
+                      checkbox-change="checkProfile()" checkbox-label="Motion Blur"></checkbox>
+        </div>
+        <div style="margin-bottom: 9px;">
+            <checkbox ng-disabled="profilesDisabled" checkbox-checked="refraction.checked"
+                      checkbox-change="checkProfile()" checkbox-label="Refraction"></checkbox>
+        </div>
+        <div style="margin-bottom: 9px;">
+            <checkbox ng-disabled="profilesDisabled" checkbox-checked="volumetric_shadows.checked"
+                      checkbox-change="checkProfile()" checkbox-label="Volumetric shadows"></checkbox>
+        </div>
+        <div style="...">
+            <checkbox ng-disabled="profilesDisabled" checkbox-checked="texture_filtering.checked"
+                      checkbox-change="checkProfile()" checkbox-label="Texture filtering"></checkbox>
+        </div>
+    </div>
+
+    <div class='settingstabbottomright'
+         style="width: 387px;height: 30px;margin-top: 10px;float: right;display: table;margin-right: 13px;">
+        <div style="float:right;">
+            <drop-down ddl-change="checkProfile()"  ng-show="multisample !== undefined" ng-disabled="profilesDisabled" class="medium"
+                       ddl-values="multisample"
+                       dropdown-label="Antialiasing" dropdown-label-position="left"></drop-down>
+        </div>
+        <div style="float:right;">
+            <drop-down ng-disabled="profilesDisabled" ddl-change="checkProfile()"  class="medium" ddl-values="anisotropy"
+                       dropdown-label="Anisotropy" dropdown-label-position="left"></drop-down>
+        </div>
+
+        <div style="float:right;">
+            <drop-down ng-disabled="profilesDisabled" ddl-change="checkProfile()" class="medium" ddl-values="texture"
+                       dropdown-label="Texture" dropdown-label-position="left"></drop-down>
+        </div>
+
+        <div style="float:right;">
+            <drop-down ng-disabled="profilesDisabled" ddl-change="checkProfile()"  class="medium" ddl-values="occlusion"
+                       dropdown-label="Ambient Occlusion / GI" dropdown-label-position="left"></drop-down>
+        </div>
+
+
+        <div style="float:right;">
+            <drop-down ng-disabled="profilesDisabled" ddl-change="checkProfile()"  class="medium" ddl-values="shader"
+                       dropdown-label="Shader Quality" dropdown-label-position="left"></drop-down>
+        </div>
+    </div>
+    <div class="ui-helper-clearfix"></div>
+    <div class='hruler'
+         style="width: 596px;height: 8px;margin-left: -40px;background-repeat:no-repeat;" roa-background-image="img/hr_ruler1.png"></div>
+
+    <div class='settingstabbottom'
+         style="float: left;margin-top: 10px;margin-left: 23px;width: 500px;">
+
+        <div style="margin-bottom:28px;">
+            <qb-slider slider-value="globals.gamma" slider-options="gammaOptions" slider-label="Gamma"
+                       slider-label-position="left"></qb-slider>
+        </div>
+        <div class="ui-helper-clearfix"></div>
+        <div>
+            <qb-slider slider-value="globals.view_distance" slider-options="viewDistanceOptions" slider-label="View Distance"
+                       slider-label-position="left"></qb-slider>
+        </div>
+
+    </div>
+
+
+</tab>
+<tab heading="Audio">
+
+    <!-- SLIDER CONTAINER -->
+
+
+    <!-- SLIDER MASTER AUDIO -->
+    <div style="float: left;margin-left: -10px;width: 400px;margin-bottom:15px;margin-top:15px;">
+      
+          <qb-slider slider-value="globals.volume_master" slider-options="volumeOptions" slider-label="Master"
+                   slider-label-position="left"></qb-slider>
+    </div>
+    <div style="float: left;margin-left: -10px;width: 400px;margin-bottom:15px;">
+        <qb-slider slider-value="globals.volume_ambient" slider-options="volumeOptions" slider-label="Ambient"
+                   slider-label-position="left"></qb-slider>
+    </div>
+
+    <div style="float: left;margin-left: -10px;width: 400px;margin-bottom:15px;">
+        <qb-slider slider-value="globals.volume_character" slider-options="volumeOptions" slider-label="Character"
+                   slider-label-position="left"></qb-slider>
+    </div>
+    <div style="float: left;margin-left: -10px;width: 400px;margin-bottom:15px;">
+        <qb-slider slider-value="globals.volume_effects" slider-options="volumeOptions" slider-label="Effects"
+                   slider-label-position="left"></qb-slider>
+    </div>
+
+
+    <div style="float: left;margin-left: -10px;width: 400px;margin-bottom:15px;">
+        <qb-slider slider-value="globals.volume_music" slider-options="volumeOptions" slider-label="Music"
+                   slider-label-position="left"></qb-slider>
+    </div>
+
+
+</tab>
+<!--
+   <tab heading="Game">
+       <div class='text' style="width:520px;margin-left: -10px;">
+       soonTM
+       </div>
+   </tab> -->
+<tab heading="Controls">
+
+       <div class='text' style="width:520px;margin-left: -10px;float:left;margin-top:15px;margin-bottom:15px;">
+      <qb-slider slider-value="globals.mouse_sensitivity" slider-options="mouseOptions" slider-label="Mouse Sensitivity"
+                   slider-label-position="left"></qb-slider>
+           </div>
+     <div class="ui-helper-clearfix"></div>
+    <!-- DESCRIPTION CONTAINER -->
+    <div class='text' style="width:520px;margin-left: -10px;">
+        Click on an entry to assign a new key:
+
+    </div>
+    <div class="ui-helper-clearfix"></div>
+    <div style="margin-top:10px;margin-left:-20px;">
+        <!-- TABLE  -->
+        <table id="hor-minimalist-b" summary="Key Bindings">
+            <thead>
+            <tr>
+                <th scope="col">Function</th>
+                <turno></turno>
+                <th scope="col">Key</th>
+            </tr>
+
+            </thead>
+            <tbody>
+            <tr ng-repeat="control in controls">
+
+                <td ng-bind=" control.name"></td>
+
+                <td>
+                    <register-key init="registerKeyInit(_name,_instance)" ng-model="control.value"
+                                  name="{{ control.name }}" click="keyClick(_name,_value)"
+                                  change="keyChange(_name,_value)"></register-key>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+</tab>
+<tab heading="Language">
+    <!-- DESCRIPTION CONTAINER -->
+    <div class='text' style="width:420px;margin-left: -10px;">
+        You can change the text Language below:
+
+    </div>
+    <div style="margin-top:10px;margin-left:-20px;">
+        <!-- DROPDOWN LONG  -->
+        <drop-down ng-disabled="{{ false}}" class="long" ddl-values="languages">
+        </drop-down>
+    </div>
+</tab>
+</tabset>
+
+</div>
+
+</div>
+</div>
+</div>

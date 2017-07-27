@@ -1,0 +1,20 @@
+<div class="content" ng-controller="faqDetailController" ng-init="init()">
+  <div class="top_img"></div>
+  <div class="bottom_img"></div>
+  <div class="inner">
+    <sidebar></sidebar>
+    <div class="right">
+        <h1 class="faqH1"><div class="backButton" ng-click="navigateBackToList()"></div>FAQ - {{faqTitle}}</h1>
+        <div class="faq">
+          <div class="faq-questions">
+            <div class="faq-question" ng-class="{'active' : faqEntry.active, 'clicked':faqEntry.answerActive}" ng-repeat="faqEntry in faqs.FAQS track by $index" category="{{::faqEntry.CATEGORY}}">
+              <a class="title" ng-click=" navigateToSubFaq({'faqCategory':faqEntry.CATEGORY, 'faqID':faqEntry.ID, 'faqTitle':faqTitle});toggleFaqAnswer(faqEntry);">{{::faqEntry.TITLE}}
+                 <div class="faq-fast-forward"></div>
+              </a>
+              <div class="faq-answer" ng-class="{'active' : faqEntry.answerActive}" ng-bind-html="::faqEntry.TEXT"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

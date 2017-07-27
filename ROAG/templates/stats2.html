@@ -1,0 +1,381 @@
+{% block extrahead %}
+<title>Relics of Annorath Statistics</title>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js" %}" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" %}" type="text/javascript"></script>
+<script src="https://dev-gui.annorath-game.com{% staticjs/jquery/jquery-ui.js" %}" type="text/javascript"></script>
+<link href="https://dev-gui.annorath-game.com{% staticjs/jquery/jquery-ui.css" %}" rel="stylesheet">
+<script type="text/javascript">
+$( document ).ready(function() {
+    var data_logins_unique = {
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+            '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+            '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+        datasets: [
+            {
+                label: "Daily logins",
+                fillColor: "rgba(444,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(0,0,0,0.3)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                scaleGridLineColor : "rgba(444,0,0,1)",
+                data: {{ thirty_days_unique_logins }}
+            }
+        ]
+    };
+    var data_logins = {
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+            '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+            '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+        datasets: [
+            {
+                label: "Daily logins",
+                fillColor: "rgba(444,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(0,0,0,0.3)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: {{ thirty_days_logins }}
+            }
+        ]
+    };
+    var data_messages = {
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+            '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+            '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+        datasets: [
+            {
+                label: "Daily logins",
+                fillColor: "rgba(440,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(0,0,0,0.3)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: {{ thirty_days_messages }}
+            }
+        ]
+    };
+    var data_characters = {
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+            '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+            '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+        datasets: [
+            {
+                label: "Daily logins",
+                fillColor: "rgba(444,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(0,0,0,0.3)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: {{ thirty_days_characters_created }}
+            }
+        ]
+    };
+    var data_characters_joins = {
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+            '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+            '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+        datasets: [
+            {
+                label: "Daily logins",
+                fillColor: "rgba(444,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(0,0,0,0.3)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: {{ thirty_days_characters_joins }}
+            }
+        ]
+    };
+    var data_launcher_logins = {
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+            '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+            '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+        datasets: [
+            {
+                label: "Daily logins",
+                fillColor: "rgba(444,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(0,0,0,0.3)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: {{ thirty_days_launcher_logins }}
+            }
+        ]
+    };
+    var data_play_duration = [
+        {
+            value: {{ duration_lt_5 }},
+            color:"#F7464A",
+            highlight: "#FF5A5E",
+            label: "< 5 min"
+        },
+        {
+            value: {{ duration_gt_5 }},
+            color: "#46BFBD",
+            highlight: "#5AD3D1",
+            label: "> 5 min"
+        },
+        {
+            value: {{ duration_gt_10 }},
+            color: "#FDB45C",
+            highlight: "#FFC870",
+            label: "> 10 min"
+        },
+        {
+            value: {{ duration_gt_15 }},
+            color: "#AABBCC",
+            highlight: "#AABBCC",
+            label: "> 15 min"
+        },
+        {
+            value: {{ duration_gt_30 }},
+            color: "#DDEEFF",
+            highlight: "#DDEEFF",
+            label: "> 30 min"
+        },
+        {
+            value: {{ duration_gt_45 }},
+            color: "#445566",
+            highlight: "#445566",
+            label: "> 45 min"
+        },
+        {
+            value: {{ duration_gt_60 }},
+            color: "#123456",
+            highlight: "#123456",
+            label: "> 60 min"
+        }
+    ];
+    var options = {
+        //Boolean - Whether we should show a stroke on each segment
+        segmentShowStroke : true,
+
+        //String - The colour of each segment stroke
+        segmentStrokeColor : "#fff",
+
+        //Number - The width of each segment stroke
+        segmentStrokeWidth : 2,
+
+        //Number - The percentage of the chart that we cut out of the middle
+        percentageInnerCutout : 50, // This is 0 for Pie charts
+
+        //Number - Amount of animation steps
+        animationSteps : 100,
+
+        //String - Animation easing effect
+        animationEasing : "easeOutBounce",
+
+        //Boolean - Whether we animate the rotation of the Doughnut
+        animateRotate : true,
+
+        //Boolean - Whether we animate scaling the Doughnut from the centre
+        animateScale : false,
+
+        //String - A legend template
+        {% verbatim %}
+        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+        {% endverbatim %}
+
+    };
+    var options_line = {
+        scaleGridLineColor : "rgba(0,0,0,0.1)"
+    };
+
+    var ctx = document.getElementById("logins_unique").getContext("2d");
+    var myLineChart = new Chart(ctx).Line(data_logins_unique, options_line);
+
+    var ctx = document.getElementById("logins").getContext("2d");
+    var myLineChart = new Chart(ctx).Line(data_logins, options_line);
+
+    var ctx = document.getElementById("messages").getContext("2d");
+    var myLineChart = new Chart(ctx).Line(data_messages, options_line);
+
+    var ctx = document.getElementById("characters").getContext("2d");
+    var myLineChart = new Chart(ctx).Line(data_characters, options_line);
+
+    var ctx = document.getElementById("characters_joins").getContext("2d");
+    var myLineChart = new Chart(ctx).Line(data_characters_joins, options_line);
+
+    var ctx = document.getElementById("launcher_logins").getContext("2d");
+    var myLineChart = new Chart(ctx).Line(data_launcher_logins, options_line);
+
+    // And for a doughnut chart
+    var ctx = document.getElementById("play_duration").getContext("2d");
+    var myDoughnutChart = new Chart(ctx).Doughnut(data_play_duration, options);
+
+});
+</script>
+<script>
+  $(function() {
+    $( "#statcat1, #statcat2, #statcat3, #statcat4" ).tabs({
+      event: "mouseover"
+    });
+  });
+  </script>
+<script>
+  $(function() {
+    $( "#accordion" ).accordion({
+      event: "click hoverintent"
+    });
+  });
+
+  $.event.special.hoverintent = {
+    setup: function() {
+      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    teardown: function() {
+      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    handler: function( event ) {
+      var currentX, currentY, timeout,
+        args = arguments,
+        target = $( event.target ),
+        previousX = event.pageX,
+        previousY = event.pageY;
+
+      function track( event ) {
+        currentX = event.pageX;
+        currentY = event.pageY;
+      };
+
+      function clear() {
+        target
+          .unbind( "mousemove", track )
+          .unbind( "mouseout", clear );
+        clearTimeout( timeout );
+      }
+
+      function handler() {
+        var prop,
+          orig = event;
+
+        if ( ( Math.abs( previousX - currentX ) +
+            Math.abs( previousY - currentY ) ) < 7 ) {
+          clear();
+
+          event = $.Event( "hoverintent" );
+          for ( prop in orig ) {
+            if ( !( prop in event ) ) {
+              event[ prop ] = orig[ prop ];
+            }
+          }
+          // Prevent accessing the original event since the new event
+          // is fired asynchronously and the old event is no longer
+          // usable (#6028)
+          delete event.originalEvent;
+
+          target.trigger( event );
+        } else {
+          previousX = currentX;
+          previousY = currentY;
+          timeout = setTimeout( handler, 100 );
+        }
+      }
+
+      timeout = setTimeout( handler, 100 );
+      target.bind({
+        mousemove: track,
+        mouseout: clear
+      });
+    }
+  };
+  </script>
+{% endblock %}
+
+{% block content %}
+
+
+<div id="accordion">
+  <h3>Player Interaction</h3>
+  <div>
+    <p>
+    <div id="statcat2">
+  <ul>
+    <li><a href="#stat4">Daily sent chat messages</a></li>
+    <li><a href="#stat5">Daily created character</a></li>
+    <li><a href="#stat6">Play duration</a></li>
+  </ul>
+  <div id="stat4">
+    <p><canvas id="messages" width="1500" height="300"></canvas></p>
+  </div>
+  <div id="stat5">
+    <p><canvas id="characters" width="1500" height="300"></canvas></p>
+  </div>
+  <div id="stat6">
+	<p><canvas id="play_duration" width="1000" height="300"></canvas></p>
+  </div>
+</div>
+    </p>
+  </div>
+  <h3>Server</h3>
+  <div>
+    <p>
+    <div id="statcat3">
+  <ul>
+    <li><a href="#stat7">Daily unique logins</a></li>
+    <li><a href="#stat8">Daily logins</a></li>
+    <li><a href="#stat9">Daily world joins</a></li>
+  </ul>
+  <div id="stat7">
+    <p><canvas id="logins_unique" width="1500" height="300"></canvas></p>
+  </div>
+  <div id="stat8">
+    <p><canvas id="logins" width="1500" height="300"></canvas></p>
+  </div>
+  <div id="stat9">
+	<p><canvas id="characters_joins" width="1500" height="300"></canvas></p>
+  </div>
+</div>
+  </div>
+  <h3>Various</h3>
+  <div>
+    <p>
+    <div id="statcat4">
+  <ul>
+    <li><a href="#stat10">Launcher logins unique</a></li>
+    <li><a href="#stat11">Stat 11</a></li>
+    <li><a href="#stat12">Stat 12</a></li>
+  </ul>
+  <div id="stat10">
+    <p><canvas id="launcher_logins" width="1500" height="300"></canvas></p>
+  </div>
+  <div id="stat11">
+    <p>stat11</p>
+  </div>
+  <div id="stat12">
+	<p>stat12</p>
+  </div>
+</div>
+    </p>
+  </div>
+<h3>Ingame</h3>
+  <div>
+    <p>
+   <div id="statcat1">
+  <ul>
+    <li><a href="#stat1">Stat 1</a></li>
+    <li><a href="#stat2">Stat 2</a></li>
+    <li><a href="#stat3">Stat 3</a></li>
+  </ul>
+  <div id="stat1">
+    <p>stat1</p>
+  </div>
+  <div id="stat2">
+    <p>stat2</p>
+  </div>
+  <div id="stat3">
+	<p>stat3</p>
+  </div>
+</div>
+    </p>
+  </div>
+</div>
+
+{% endblock %}

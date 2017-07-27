@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config version="1.0">
+    <callers>
+        <caller name="USER">
+            <action name="REGISTER">
+                <!-- Internal -->
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="COUNTRY_NOT_FOUND"/>
+                <result_code name="CITY_TO_LONG"/>
+                <result_code name="CITY_EMPTY"/>
+                <result_code name="CITY_INVALID"/>
+                <result_code name="STATE_TO_LONG"/>
+                <result_code name="STATE_EMPTY"/>
+                <result_code name="STATE_INVALID"/>
+                <result_code name="STREET_TO_LONG"/>
+                <result_code name="STREET_EMPTY"/>
+                <result_code name="STREET_INVALID"/>
+                <result_code name="ZIPCODE_TO_LONG"/>
+                <result_code name="ZIPCODE_EMPTY"/>
+                <result_code name="ZIPCODE_INVALID"/>
+                <result_code name="BIRTH_DATE_INVALID"/>
+                <result_code name="SEX_INVALID"/>
+                <result_code name="LANGUAGE_NOT_FOUND"/>
+                <result_code name="PREREQUISITES_INVALID"/>
+                <result_code name="FAILED_CAPTCHA_INVALID"/>
+                <result_code name="USERNAME_TO_LONG"/>
+                <result_code name="USERNAME_EMPTY"/>
+                <result_code name="USERNAME_INVALID"/>
+                <result_code name="USERNAME_TAKEN"/>
+                <result_code name="FIRST_NAME_TO_LONG"/>
+                <result_code name="FIRST_NAME_EMPTY"/>
+                <result_code name="FIRST_NAME_INVALID"/>
+                <result_code name="LAST_NAME_TO_LONG"/>
+                <result_code name="LAST_NAME_EMPTY"/>
+                <result_code name="LAST_NAME_INVALID"/>
+                <result_code name="EMAIL_INVALID"/>
+                <result_code name="EMAIL_TAKEN"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="MODIFY">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="COUNTRY_NOT_FOUND"/>
+                <result_code name="CITY_TO_LONG"/>
+                <result_code name="CITY_EMPTY"/>
+                <result_code name="CITY_INVALID"/>
+                <result_code name="STATE_TO_LONG"/>
+                <result_code name="STATE_EMPTY"/>
+                <result_code name="STATE_INVALID"/>
+                <result_code name="STREET_TO_LONG"/>
+                <result_code name="STREET_EMPTY"/>
+                <result_code name="STREET_INVALID"/>
+                <result_code name="ZIPCODE_TO_LONG"/>
+                <result_code name="ZIPCODE_EMPTY"/>
+                <result_code name="ZIPCODE_INVALID"/>
+                <result_code name="BIRTH_DATE_INVALID"/>
+                <result_code name="SEX_INVALID"/>
+                <result_code name="LANGUAGE_NOT_FOUND"/>
+                <result_code name="PREREQUISITES_INVALID"/>
+                <result_code name="USERNAME_TO_LONG"/>
+                <result_code name="USERNAME_EMPTY"/>
+                <result_code name="USERNAME_INVALID"/>
+                <result_code name="USERNAME_TAKEN"/>
+                <result_code name="FIRST_NAME_TO_LONG"/>
+                <result_code name="FIRST_NAME_EMPTY"/>
+                <result_code name="FIRST_NAME_INVALID"/>
+                <result_code name="LAST_NAME_TO_LONG"/>
+                <result_code name="LAST_NAME_EMPTY"/>
+                <result_code name="LAST_NAME_INVALID"/>
+                <result_code name="EMAIL_INVALID"/>
+                <result_code name="EMAIL_TAKEN"/>
+                <result_code name="FAILED_MISC"/>
+                <result_code name="USER_NOT_FOUND"/>
+                <result_code name="NEEDS_REACTIVATION"/>
+            </action>
+
+            <action name="DATA">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="USER_NOT_FOUND"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="BAN">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="USER_NOT_FOUND"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="LOCK">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="USER_NOT_FOUND"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <!-- Public -->
+            <action name="ACTIVATE">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="USER_NOT_FOUND"/>
+                <result_code name="INVALID_TOKEN"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="REACTIVATE">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="INVALID_TOKEN"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="RECOVER_INIT">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="USER_NOT_FOUND"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="RECOVER">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="TOKEN_TOO_OLD"/>
+                <result_code name="INVALID_TOKEN"/>
+                <result_code name="USER_NOT_FOUND"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+          <caller name="GUI">
+              <action name="VERIFY_CREDENTIALS">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="UNSUCCESSFULLY"/>
+                <result_code name="FAILED_USER_NOT_FOUND"/>
+                <result_code name="FAILED_USER_NOT_AUTHENTICATED"/>
+                <result_code name="FAILED_USER_NOT_ACTIVATED"/>
+                <result_code name="FAILED_USER_NOT_ACTIVE"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_WRONG_USER_OR_PASSWORD"/>
+                <result_code name="FAILED_MISSING_VALUES"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+    </callers>
+    <global_errors>
+        <error name="ERROR_NOT_AUTHENTICATED"/>
+        <error name="ERROR_ACTION_UNKNOWN"/>
+        <error name="ERROR_CALLER_UNKNOWN"/>
+        <error name="ERROR_ONLY_POST_SUPPORTED"/>
+        <error name="ERROR_INVALID_CREDENTIALS"/>
+        <error name="ERROR_OBJECT_LOCKED"/>
+        <error name="ERROR_RATE_LIMIT"/>
+        <error name="ERROR_MISC_ERROR"/>
+    </global_errors>
+</config>

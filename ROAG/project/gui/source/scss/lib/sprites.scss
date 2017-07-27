@@ -1,0 +1,54 @@
+@import 'helper';
+ /*
+
+   .sprites { background: url(sprites.png) no-repeat; }
+.0010_DropDown1_normal_bg { width: 256px; height: 40px; background-position: -603px 0; }
+.0011_DropDown1_hover_bg { width: 256px; height: 40px; background-position: -860px -38px; }
+.0020_DropDown2_normal_bg { width: 101px; height: 33px; background-position: -501px 0; }
+.0021_DropDown2_hover_bg { width: 101px; height: 33px; background-position: -501px -34px; }
+.0030_progressbar1_bg { width: 400px; height: 18px; background-position: -549px -79px; }
+.0031_progressbar1_progress_bg { width: 512px; height: 14px; background-position: 0 -81px; }
+.0040_InputBox1_normal { width: 256px; height: 37px; background-position: -860px 0; }
+.0041_InputBox1_hover { width: 256px; height: 37px; background-position: -603px -41px; }
+.0050_checkbox_normal { width: 17px; height: 17px; background-position: -513px -68px; }
+.0052_checkbox_checked { width: 17px; height: 17px; background-position: -531px -68px; }
+.0060_radiobutton_normal { width: 17px; height: 17px; background-position: -950px -79px; }
+.0062_radiobutton_checked { width: 17px; height: 17px; background-position: -968px -79px; }
+.0070_slider_combined { width: 500px; height: 80px; background-position: 0 0; }
+
+  */
+
+$controls_sprite1: url($amazonUrl + '/img/controls/controls_sprite.png');
+$img_0010_DropDown1_normal_bg: -603px 0 no-repeat;
+$img_0011_DropDown1_hover_bg:  -860px -38px no-repeat;
+$img_0020_DropDown2_normal_bg:  -501px 0 no-repeat;
+$img_0021_DropDown2_hover_bg:  -501px -34px no-repeat;
+$img_0030_progressbar1_bg:  -549px -79px no-repeat;
+$img_0031_progressbar1_progress_bg:  0 -81px no-repeat;
+$img_0040_InputBox1_normal:  -860px 0 no-repeat;
+$img_0041_InputBox1_hover:  -603px -41px no-repeat;
+$img_0050_checkbox_normal:  -513px -68px no-repeat;
+$img_0052_checkbox_checked:  -531px -68px no-repeat;
+$img_0060_radiobutton_normal:  -950px -79px no-repeat;
+$img_0062_radiobutton_checked:  -968px -79px no-repeat;
+$img_0070_slider_combined: 0 0 no-repeat;
+
+$img_0010: $controls_sprite1 $img_0010_DropDown1_normal_bg;
+$img_0011: $controls_sprite1 $img_0011_DropDown1_hover_bg;
+$img_0020: $controls_sprite1 $img_0020_DropDown2_normal_bg;
+$img_0021: $controls_sprite1 $img_0021_DropDown2_hover_bg;
+$img_0030: $controls_sprite1 $img_0030_progressbar1_bg;
+$img_0031: $controls_sprite1 $img_0031_progressbar1_progress_bg;
+$img_0040: $controls_sprite1 $img_0040_InputBox1_normal;
+$img_0041: $controls_sprite1 $img_0041_InputBox1_hover;
+$img_0050: $controls_sprite1 $img_0050_checkbox_normal;
+$img_0052: $controls_sprite1 $img_0052_checkbox_checked;
+$img_0060: $controls_sprite1 $img_0060_radiobutton_normal;
+$img_0062: $controls_sprite1 $img_0062_radiobutton_checked;
+$img_0070: $controls_sprite1 $img_0070_slider_combined;
+
+
+
+$doubleRuler_bg: $amazonUrl + '/img/doubleruler.png';
+$doubleRuler_width: 330px;
+$doubleRuler_height: 3px;

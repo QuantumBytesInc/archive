@@ -1,0 +1,126 @@
+@import '../../../lib/sprites';
+@import '../../../lib/helper';
+$charcreation_bg :$amazonUrl + '/img/state/game/charCreation/charactercreation_bg.png';
+.view_CHAR_CREATION
+{
+
+  //Surrounding container
+  .container {
+    background-image: url($charcreation_bg);
+    background-repeat: no-repeat;
+    width: 371px;
+    height: 530px;
+    z-index: 1;
+    position:relative;
+  }
+
+  //Headline
+  .creationHeadline {
+    margin: 0 auto;
+    display: table;
+    padding-top: 1.42857143rem;
+  }
+
+
+  //Char Creation Content
+  .content {
+   display: block;
+  margin: 0 auto;
+  width: 264px;
+
+  }
+
+  //Input  + Headline
+  .nickName
+  {
+    .text
+    {
+      margin-top: 12px;
+      text-align: center;
+    }
+  }
+
+  //Input  + Headline
+  .foreName
+  {
+    .text
+    {
+      margin-top: 12px;
+      text-align: center;
+    }
+  }
+
+  //Input  + Headline
+  .lastName
+  {
+    .text
+    {
+      margin-top: 12px;
+      text-align: center;
+    }
+  }
+
+  //origin + Headline
+  .origin
+  {
+    .text
+    {
+      margin-top: 12px;
+      text-align: center;
+    }
+
+  }
+
+  .size
+  {
+        .text
+    {
+      margin-top: 12px;
+      text-align: center;
+    }
+
+  }
+
+  .age
+  {
+        .text
+    {
+      margin-top: 12px;
+      text-align: center;
+    }
+
+  }
+
+  .bottom
+  {
+position: absolute;
+bottom: 60px;
+width: 327px;
+margin-left: 20px;
+text-align: center;
+
+
+    .row1
+    {
+      position:relative;
+      top:-5px;
+    }
+    .row2
+    {
+      position:relative;
+      top:5px;
+    }
+  }
+    .spacer{
+    background-image:url($doubleRuler_bg);
+    width:327px /*Other length needed*/;
+    height:$doubleRuler_height;
+     }
+
+
+
+
+
+}
+
+

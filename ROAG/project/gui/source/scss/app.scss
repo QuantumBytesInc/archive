@@ -1,0 +1,93 @@
+
+@import 'lib/fonts';
+@import 'lib/sizes';
+
+#form
+ {
+    width:$appWidth;
+    height:$appHeight;
+ }
+
+body{
+
+    width:$appWidth;
+    height:$appHeight;
+    -webkit-user-select: none;
+    margin:0;
+    padding:0;
+    font: $font-stack-text;
+  /*No scrolling out of viewport*/
+    overflow:hidden;
+}
+
+.headline
+{
+    font:$font-stack-headline;
+    cursor:default;
+    .marginBottom
+    {
+        margin-bottom:0.625em;
+    }
+    .marginTop
+    {
+        margin-top:0.625emx;
+    }
+}
+
+
+.subline
+{
+    font:$font-stack-subline;
+    cursor:default;
+    .marginTop
+    {
+       margin-top:0.625em;
+    }
+    .marginBottom
+    {
+       margin-bottom:0.625em;
+    }
+}
+.text
+{
+    font:$font-stack-text;
+    cursor:default;
+}
+
+.contentMargin
+{
+    margin-left:0.625em;
+}
+
+
+/**************/
+
+
+/*http://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/ Flexbox*/
+
+.flexAligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  height: 100vh;
+
+  @supports not (-ms-flex: 1) {
+    //height: auto;
+    //min-height: 24em;
+  }
+}
+
+.flexAligner-item {
+  max-width: 50%;
+}
+
+.flexAligner-item--top {
+  align-self: flex-start;
+}
+
+.flexAligner-item--bottom {
+  align-self: flex-end;
+}
+/*Flexbox End*/

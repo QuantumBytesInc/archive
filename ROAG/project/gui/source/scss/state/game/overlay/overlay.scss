@@ -1,0 +1,42 @@
+.location-overlay {
+
+	width: 650px;
+	height: 350px;
+    white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: loc-dsp-anim 5s;
+    -webkit-animation-delay: 2s;
+    visibility:hidden;
+	-webkit-user-select: none;
+	pointer-events: none;
+
+    }
+
+.loc {
+	margin: 3.8rem 11rem;
+	position: absolute;
+	color: rgba(255, 255, 255, 1);
+	font-weight: bold;
+	text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+	font-size: 4em;
+    }
+
+.area {
+	margin: 8rem 11rem;
+	position: absolute;
+	color: rgba(255, 255, 255, 1);
+	text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+	font-size: 3em;
+    }
+
+.flag {
+	position: absolute;
+	-webkit-transform: scale(0.5);
+    }
+
+@-webkit-keyframes loc-dsp-anim {
+  0% 		{ visibility:visible;	opacity: 0;		-webkit-filter: blur(0px);		-webkit-transform: scale3d	(.8, .8, .8);  		}
+  30%, 70%	{visibility:visible;	opacity: 1;		-webkit-filter: blur(0px);    	-webkit-transform: scale3d	(1, 1, 1);  		}
+  50%		{visibility:visible;	opacity: 1;		-webkit-filter: blur(0px);    	-webkit-transform: scale3d	(1, 1, 1);  		}
+  100%		{visibility:hidden; opacity: 0;		-webkit-filter: blur(0px);    	-webkit-transform: scale3d	(1.4, 1.4, 1.4);	}
+}

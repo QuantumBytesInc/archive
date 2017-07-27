@@ -1,0 +1,57 @@
+
+<link rel="stylesheet" ng-href="" preload-scope/>
+<style type="text/css">
+.logwindow {
+overflow: scroll;
+margin-left: 16px;
+margin-top: 15px;
+width: 595px;
+height: 435px;
+background: rgba(255, 255, 255, 0);
+-webkit-user-select: text;
+}
+
+.logwindow::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+ 
+.logwindow::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+ 
+.logwindow::-webkit-scrollbar-thumb {   
+    border-radius: 10px;
+    background: rgba(158, 3, 3, 1); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.logwindow::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
+
+.logwindow::-webkit-scrollbar-corner {
+background: rgba(0,0,0,0.3);
+}
+</style>
+<div class="flexAligner">
+<div class="flexAligner-item">
+<div class="view_LOG_VIEW_container" style="padding-top: 1px;">
+<div class="buttonStrip">
+
+
+    <!--<button-text button-click="copyToClipboard()" button-label="TB_COPYLOG"></button-text>-->
+    <button-text button-click="close()" button-label="TB_CLOSE"></button-text>
+
+</div><div id="logwindow" class="logwindow">
+
+
+
+<div ng-repeat="log in logHistory">
+    {{ ::log.msg}}
+</div>
+</div>
+
+</div>
+</div>
+</div>

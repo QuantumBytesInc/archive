@@ -1,0 +1,56 @@
+<div class="controlBar" ng-if="isBank === 0">
+    <div class="btn close" ng-click="toggleStorage()"></div>
+    <div class="btn toggle" ng-click="toggleStorage()"></div>
+
+</div>
+<!--DataId needed for move-event for storage.-->
+<div data-id="storageHolder" ng-init="init()" style="position:absolute;">
+
+    <div class="bankInformation" ng-if="isBank===1">
+        <div class="title">
+            <span class="headline">HOLY EMPIRE BANK OF WERUNA</span>
+            <span class="subline">HIGH CITY OF WYRIEL</span>
+        </div>
+
+        <div class="money">
+            <span class="gold">0</span>
+            <span class="silver">0</span>
+            <span class="bronze">0</span>
+        </div>
+        <div class="pages">
+            <span class="one">1</span>
+            <span ng-if="false === true" class="two">2</span>
+            <span ng-if="false === true" class="three">3</span>
+            <span ng-if="false === true" class="four">4</span>
+        </div>
+
+
+    </div>
+
+    <table data-id="storage" data-page="{{ key }}"
+           style="position:absolute;margin-top:{{ startY }}px;margin-left:{{ startX }}px;background-repeat:no-repeat;"
+           ng-init="" ng-repeat="(key,value) in slotIndex"
+           ng-class="actualPage == key ? 'storageVisible' : 'storageNotVisible'">
+
+
+        <tr ng-repeat="i in rows track by $index" ng-init="sectionIndex = $index;sectionLast = $last;">
+
+            <td class="sortable" data-templateid="-1" data-itemids="[-1]" data-row-index="{{ sectionIndex }}"
+                data-col-index="{{$index}}"
+                data-slot-index="{{ slotIndex[key][sectionIndex][$index] }}" ng-repeat="x in cols track by $index"
+                ng-init="sectionLast === true && $last === true && (key == (pageSize-1))? repeatFinished() : null">
+
+            </td>
+
+        </tr>
+
+    </table>
+    <!--isBank === 0-->
+    <div style="color:white;margin-left:{{ startX }}px" ng-if="true === false">
+        {{ actualWeight }} / {{ maxWeight }}
+    </div>
+
+
+</div>
+
+<br/>

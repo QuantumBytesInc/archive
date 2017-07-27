@@ -1,0 +1,66 @@
+<div class="container" ng-init="initCtrl()">
+        <span class="headline creationHeadline">
+            CHARACTER CREATION
+        </span>
+
+    <div class="ui-helper-clearfix"></div>
+    <div style="margin-left: 20px;" class="spacer"></div>
+    <div class="content">
+        <!-- CONTENT -->
+
+        <!-- NICKNAME -->
+        <div class="nickName">
+            <div class='text'>Nickname</div>
+            <textbox text-model="nickname" text-required="true"></textbox>
+        </div>
+
+        <!-- FORENAME -->
+        <div class="foreName">
+            <div class='text'>Forename</div>
+            <textbox text-model="forename" text-required="true"></textbox>
+        </div>
+
+        <!-- LASTNAME -->
+        <div class="lastName">
+            <div class='text'>Surname</div>
+            <textbox text-model="surname" text-required="true"></textbox>
+        </div>
+
+        <!-- ORIGIN -->
+        <div class="origin">
+            <div class='text'>Origin</div>
+            <drop-down class="long" ddl-values="charOrigin"></drop-down>
+        </div>
+        <!-- Calculate right size after dropdown spawn -->
+        <div class="ui-helper-clearfix"></div>
+        <!-- HEIGHT -->
+        <div ng-show="false" ng-disabled="true" class="size">
+            <div class='text'>Height</div>
+
+            <qb-slider slider-value="sld_charSize" slider-options="sld_charSizeOptions"></qb-slider>
+
+        </div>
+
+        <!-- AGE -->
+        <div ng-show="false" ng-disabled="true" class="age">
+            <div class='text'>Age</div>
+            <qb-slider slider-value="sld_charAge" slider-options="sld_charAgeOptions"></qb-slider>
+        </div>
+
+    </div>
+    <div class="bottom">
+        <div class="spacer" style="margin-bottom: 10px;"></div>
+        <div class="row1">
+            <button-text button-click="reset()" button-label="RESET"></button-text>
+
+        </div>
+        <div class="spacer"></div>
+        <div class="row2"> <button-text button-disabled="surname.trim() === '' || forename.trim() === '' || nickname.trim() === ''" button-click="createChar()" button-label="TB_ACCEPT"></button-text>
+
+            <button-text button-click="cancel()" button-label="TB_CANCEL"></button-text>
+
+        </div>
+    </div>
+
+
+</div>

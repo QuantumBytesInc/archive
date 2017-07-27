@@ -1,0 +1,22 @@
+<div class="content" ng-controller="newsController" ng-init="init()">
+  <div class="top_img"></div>
+    <div class="bottom_img"></div>
+   <div class="inner">
+       <sidebar></sidebar>
+       <div class="right">
+            <h1>{{::pageTitle}}</h1>
+            <div news-functions class="news_list">
+
+              <div class="news" ng-repeat="news_entry in news.NEWS">
+                <h3>{{::news_entry.TITLE}}</h3>
+                <span class="time"><span class="creator">{{::news_entry.CREATOR}}</span> am {{::news_entry.CREATED_TIME}}</span>
+                <div class="txt">
+                  <div class="shortText" ng-bind-html="news_entry.SHORT_TEXT"></div>
+                  <a href ui-sref="newsDetail({newsID: news_entry.ID})" tilte="{{::news_entry.TITLE}}" class="more btn animate">Read more ...</a>
+                </div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+</div>

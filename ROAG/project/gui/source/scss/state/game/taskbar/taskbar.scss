@@ -1,0 +1,159 @@
+@import '../../../lib/sprites';
+@import '../../../lib/helper';
+$taskbar_bg: $amazonUrl + '/img/state/game/taskbar/statusbar_background.png';
+$taskbar_sprite_torch: $amazonUrl + '/img/state/game/taskbar/sprite_torch.png';
+$taskbar_sprite_pickaxe: $amazonUrl + '/img/state/game/taskbar/sprite_pickaxe.png';
+$taskbar_sprite_slot: $amazonUrl + '/img/state/game/taskbar/sprite_slot_empty.png';
+$taskbar_sprite_settings_chat: $amazonUrl + '/img/state/game/taskbar/sprite_settings_chat.png';
+$taskbar_bag: $amazonUrl + '/img/state/game/taskbar/item_bag1.png';
+.view_TASKBAR {
+  .taskbar {
+        width: 867px;
+        height: 127px;
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        margin-left: -433px;
+        background-image: url($taskbar_bg);
+    }
+  .slot {
+    background: url($taskbar_sprite_slot) no-repeat;
+  }
+
+  .slot.inactive {
+    background-position: 0 0;
+    width: 66px;
+    height: 66px;
+  }
+
+  .icon_bag{
+    background: url($taskbar_bag) no-repeat;
+
+  }
+   .icon_bag.inactive{
+
+  background-position: 0 0;
+  width: 66px;
+  height: 66px;
+  }
+   .icon_bag.active{
+
+ background-position: 0 -100px;
+width: 66px;
+height: 66px;
+  }
+
+  .icon_chat, .icon_settings {
+    background: url($taskbar_sprite_settings_chat) no-repeat;
+  }
+
+  .icon_chat.inactive {
+    background-position: 0 0;
+    width: 30px;
+    height: 29px;
+  }
+
+  .icon_chat.active {
+    background-position: 0 -100px;
+    width: 30px;
+    height: 29px;
+  }
+
+  .icon_settings.inactive {
+    background-position: -100px 0;
+    width: 30px;
+    height: 29px;
+  }
+
+  .icon_settings.active {
+    background-position: -100px -100px;
+    width: 30px;
+    height: 29px;
+  }
+
+
+
+  .icon_torch {
+    background: url($taskbar_sprite_torch) no-repeat;
+  }
+
+  .icon_torch.inactive {
+    background-position: 0 0;
+    width: 66px;
+    height: 66px;
+  }
+
+  .icon_torch.active {
+    background-position: 0 -100px;
+    width: 66px;
+    height: 66px;
+  }
+
+
+   .icon_pickaxe {
+    background: url($taskbar_sprite_pickaxe) no-repeat;
+  }
+
+  .icon_pickaxe.inactive {
+    background-position: 0 0;
+    width: 66px;
+    height: 66px;
+  }
+
+  .icon_pickaxe.active {
+    background-position: 0 -100px;
+    width: 66px;
+    height: 66px;
+  }
+
+
+  .slot0 {
+    position: absolute;
+    top: 46px;
+    left: 105px;
+  }
+
+  .slot1 {
+    position: absolute;
+    top: 46px;
+    left: 181px;
+  }
+
+  .slot2 {
+    position: absolute;
+    top: 46px;
+    left: 257px;
+  }
+
+  .slot3 {
+    position: absolute;
+    top: 46px;
+    left: 546px;
+  }
+
+  .slot4 {
+    position: absolute;
+    top: 46px;
+    left: 623px;
+  }
+
+  .slot5 {
+    position: absolute;
+    top: 46px;
+    left: 699px;
+  }
+
+  .slot6 {
+    position: absolute;
+    top: 46px;
+    left: 783px;
+  }
+
+  .slot7 {
+    position: absolute;
+    top: 84px;
+    left: 783px;
+  }
+}
+
+

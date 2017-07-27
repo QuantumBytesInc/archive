@@ -1,0 +1,70 @@
+<div class="content featureSize" ng-controller="featureDetailController" ng-init="init()">
+   <div class="top_img"></div>
+   <div class="bottom_img"></div>
+   <div class="inner">
+       <sidebar></sidebar>
+       <div class="right big">
+            <div feature-detail-slider class="feature_detail">
+              <div class="category_bar">
+                    <div class="elems">
+                      <a class="elem prev animate" ui-sref="featureDetail({featureID: getFeatureObject('prev').SIBLINGS[0].ID, partID: 1})">
+                        {{getFeatureObject("prev").TITLE}}
+                      </a>
+                      <div class="elem cur animate">
+                        {{getFeatureObject("exact").TITLE}}
+                      </div>
+                      <a class="elem next animate" ng-click="navigateTo({featureID: getFeatureObject('next').SIBLINGS[0].ID, partID: 1})">
+                        {{getFeatureObject("next").TITLE}}
+                      </a>
+                    </div>
+              </div>
+              <div class="slide_bar">
+                  <a class="elem" ng-click="navigateToSubFeature(featureSibling.ID, 1);" ng-repeat="featureSibling in featureDetail.SIBLINGS" ng-class="{'cur' : isActiveFeature(featureSibling.ID)}">
+                      {{featureSibling.TITLE}}
+                  </a>
+              </div>
+              <a class="forward btn animate" ng-class="{'dataLoaded' : dataLoaded}" ng-click="clickArrow()" >
+                <div class="overlay"></div>
+                <div class="img_forward_right"></div>
+              </a>
+              <a class="back btn animate" ng-class="{'dataLoaded' : dataLoaded}" ng-click="clickArrow()" >
+                <div class="overlay"></div>
+                <div class="img_forward_left"></div>
+              </a>
+              <div class="slides">
+                <div class="swiper-pagination"></div>
+                   <div class="swiper-wrapper">
+                     <div ng-repeat="curentFeature in featureDetail.PART_SLIDES" ng-init="$last ? initSlider() : angular.noop()" class="slide swiper-slide">
+                       <!-- <img src="{{featureDetail.IMAGE}}" alt="World 1"> -->
+                       <div class="over" ng-click="clickSlide()">
+                         <div ng-show="tutorialOverlay" class="tutorial_overlay">
+                           <div class="tutorial_text">
+                             <p class="main">Use buttons to navigate</p>
+                             <p class="sub">Use key controls and swipe alternatively aswell.</p>
+                             <p class="mobile">Use your fingers to navigate</p>
+                           </div>
+                           <img width="131" height="auto" ng-src="{{guiURL}}img/tutorial_left.png" class="tutorial_left">
+                           <img width="124" height="auto" ng-src="{{guiURL}}img/tutorial_right.png" class="tutorial_right">
+                         </div>
+                         <div class="overlay" ng-hide="tutorialOverlay">
+                            <h1>{{curentFeature.TITLE}}</h1>
+                         </div>
+                         <div class="overlay2 animate" ng-class="{'show' : showDownloadOverlay}">
+                             <div class="download">
+                               <a class="link" target="_blank" href="{{curentFeature.IMAGE_FULL}}">
+                                 <span class="animate">Download Image<br> (1920x1080)</span>
+                                 <img class="animate" ng-src="{{guiURL}}img/download_white.png" alt="Download">
+                               </a>
+                            </div>
+                         </div>
+                         <img class="feature_img" ng-src="{{curentFeature.IMAGE}}">
+                       </div>
+                       <p class="slide_text" ng-bind-html="curentFeature.TEXT"></p>
+                     </div>
+
+                    </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Interface</class>
+ <widget class="QMainWindow" name="Interface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1601</width>
+    <height>1424</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Interface</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTableWidget" name="threads">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>1161</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <column>
+     <property name="text">
+      <string>Thread</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>State</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Open</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Processed</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Errors</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Details</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QTableWidget" name="sockets">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>620</y>
+      <width>1161</width>
+      <height>741</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <column>
+     <property name="text">
+      <string>Group</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>State</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Port</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Type</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Processed</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Errors</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Details</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="labelUnigine">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>579</y>
+      <width>561</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>TCP-Sockets to Unigine</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDjango">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>561</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>JSON Workers to Django</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDjango_2">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>50</y>
+      <width>331</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Stats</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>90</y>
+      <width>391</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="0">
+      <widget class="QLabel" name="something">
+       <property name="text">
+        <string>Socket requets received:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Requests sent:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Request answered:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Socket requests sent:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="labelRequestsSent">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="labelRequestsReceived">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="labelRequetsSocketReceived">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="labelRequestsSocketSent">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1601</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTest">
+    <property name="title">
+     <string>Application</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionConfiguration"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuActions">
+    <property name="title">
+     <string>Actions</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionStart"/>
+    <addaction name="actionRestart"/>
+   </widget>
+   <addaction name="menuTest"/>
+   <addaction name="menuActions"/>
+  </widget>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionRestart">
+   <property name="text">
+    <string>Restart</string>
+   </property>
+  </action>
+  <action name="actionConfiguration">
+   <property name="text">
+    <string>Configuration</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

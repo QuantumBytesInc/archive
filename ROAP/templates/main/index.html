@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html ng-app="relicsPortalApp">
+{% load django_seo_js %}
+<head>
+    <base href="{{ MAIN_URL }}"/>
+    <title ng-bind="siteTitle +' - Relics of Annorath'"></title>
+    <!-- SEO -->
+    <meta name="description" id="metaDescription"/>
+    <meta name="keywords" content="mmorpg,sandbox,game,gaming,relics of annorath,roa,Merasurien,gathering,crafting,pvp">
+    <meta name="page-topic" content="mmorpg,gaming,game,sandbox">
+    <meta name="revisit-after" content="1 days">
+    <meta name="google-site-verification" content="aFSv5OC-hlQKE0_JIR2m5CN364UDGlqb5h5cXdnhc1w"/>
+    <meta name="title" id="metaTitle"/>
+    <meta property="og:url" id="metaOgURL"/>
+    <meta property="og:type" id="metaOgType"/>
+    <meta property="og:title" id="metaOgTitle"/>
+    <meta property="og:description" id="metaOgDescription"/>
+    <meta property="og:image" id="metaOgImage"/>
+    <meta name="robots" content="index, follow">
+
+    <!-- Meta stuff -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="google-site-verification" content="aFSv5OC-hlQKE0_JIR2m5CN364UDGlqb5h5cXdnhc1w"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="theme-color" content="#481f04">
+    <link href="{{ STATIC_URL }}favicon.ico" rel="icon" type="image/x-icon">
+    <link href="{{ STATIC_URL }}gui/css/app.min.css" rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+        var amazonURL = "{{ STATIC_URL }}";
+    </script>
+</head>
+<body ng-controller="mainController" ng-init="init()">
+
+<div class="site_wrapper">
+    <img class="bg_img" ng-if="$root.isMobile() == false" ng-src="{{ STATIC_URL }}gui/img/bg_burg.jpg" alt="Burg BG">
+
+    <div class="notification_wrapper" style="display:none;">
+        <div class="notification"></div>
+    </div>
+
+    <div class="sticky_wrap">
+        <header class="site_header">
+            <div class="center">
+                <div class="btn_group">
+                    <languages></languages>
+                    <div class="btn login animate">
+                        <div class="mobileTouchArea"></div>
+                      <span>
+                        <span ng-show="!loggedIn">Login & More</span>
+                        <span ng-show="loggedIn">You are online</span>
+                      </span>
+                        <div class="icon lock_icon" alt="Lock Icon"></div>
+
+                        <div class="loginBoard">
+                            <a ng-show="!loggedIn" target="_self" href="{{ MAIN_URL }}accounts/login/"
+                               class="elem">Account Login</a>
+                            <a ng-show="!loggedIn" href="/register/" class="elem">Sign-Up Now</a>
+                            <a ng-show="loggedIn" href="/profile/" class="elem">Profile</a>
+                            <a ng-show="!loggedIn" href="{{ CAS_URL }}reset/" target="_self"
+                               class="elem">Recover password</a>
+
+                            <a ng-show="loggedIn" href="{{ MAIN_URL }}accounts/logout/" target="_self" class="elem">Logout</a>
+                            <a ng-hide="true" href="/account-activation/00001/" class="elem">Account Activation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <navigation></navigation>
+            <noscript class="nojs">Your browser does not support JavaScript!</noscript>
+            <div ui-view></div>
+            <socialshare></socialshare>
+        </div>
+        <div class="push"></div>
+    </div>
+    <footer class="footer">
+        <div class="center">
+            <div class="left">
+                <div class="button_group">
+                    <a class="btn animate fb" target="_blank" href="https://www.facebook.com/annorath">
+                        <div></div>
+                    </a>
+                    <a class="btn animate twtr" target="_blank" href="https://twitter.com/AnnorathGame/">
+                        <div></div>
+                    </a>
+                    <a class="btn animate youtube" target="_blank"
+                       href="https://www.youtube.com/user/RelicsOfAnnorath?feature=watch">
+                        <div></div>
+                    </a>
+                    <a class="btn animate gplus" target="_blank" href="https://plus.google.com/+Annorath-game">
+                        <div></div>
+                    </a>
+                </div>
+            </div>
+            <div class="mid seperator"></div>
+            <div class="right">
+                <div class="img_sponsors" alt="Sponsoren"></div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="mobile_share animate">
+        <div class="mid">
+            <a class="btn animate fb" target="_blank" href="https://www.facebook.com/annorath">
+                <div></div>
+            </a>
+            <a class="btn animate twtr" target="_blank" href="https://twitter.com/AnnorathGame/">
+                <div></div>
+            </a>
+            <a class="btn animate youtube" target="_blank"
+               href="https://www.youtube.com/user/RelicsOfAnnorath?feature=watch">
+                <div></div>
+            </a>
+            <a class="btn animate gplus" target="_blank" href="https://plus.google.com/+Annorath-game">
+                <div></div>
+            </a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=explicit"
+        async defer></script>
+<script async defer type="text/javascript" src="{{ STATIC_URL }}gui/js/app.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-35194192-1', 'auto');
+  ga('require', 'linkid');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

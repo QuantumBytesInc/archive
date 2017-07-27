@@ -1,0 +1,10 @@
+<div class="input-text" ng-class="[hovered, focused, error]">
+    <input ng-mouseenter="hovered='hover'"  name="{{ 'test' }}" ng-mouseleave="hovered=''"  ng-focus="focused='focus'" ng-blur="focused=''"
+           type="{{ type }}" ng-model="textModel"
+           ng-enter="textEnter()"
+           placeholder="{{ placeholder  }}"
+           ng-required="required"
+            >
+    <span class="label" ng-class="labelPosition" translate="{{ label }}"></span>
+</div>
+

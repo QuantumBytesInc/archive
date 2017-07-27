@@ -1,0 +1,9 @@
+Package: ROAL
+Version: 1.0
+Section: games
+Priority: optional
+Architecture: amd64
+Depends: qt5-default, openssl, libsfml, libssl, libboost-all, libarchive, libtorrent-rasterbar, icu
+Maintainer: QuantumBytes inc. <contact@quantum-bytes.com>
+Description: Relics of Annorath Launcher
+ Launcher to install and update Relics of Annorath game runtime.

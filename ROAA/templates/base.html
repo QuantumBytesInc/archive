@@ -1,0 +1,112 @@
+{% load recaptcha2 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Belleza' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700' rel='stylesheet' type='text/css'>
+    <title>Relics of Annorath - Authentication</title>
+    {% recaptcha_init %}
+</head>
+<body>
+<div class="container">
+    <img class="top_img" src="https://dhlufim0x8urs.cloudfront.net/production/data/static/gui/img/pergament_top.png" alt="Pergament Top">
+    <div class="letter">
+        <h2>{% block title %}{% endblock %}</h2>
+        {% block content %}{% endblock %}
+    </div>
+    <img class="bottom_img" src="https://dhlufim0x8urs.cloudfront.net/production/data/static/gui/img/pergament_bottom.png" alt="Pergament Top">
+</div>
+      <style>
+         * {font-family: 'Open Sans', sans-serif;}
+         body {
+         background-image: url("https://dhlufim0x8urs.cloudfront.net/production/data/static/img/bg_burg.jpg");
+         background-size: cover;
+         }
+         .letter {
+         max-width: 460px;
+         line-height: 1.4;
+         text-align: justify;
+         margin: 0 auto;
+         background-image: url("https://dhlufim0x8urs.cloudfront.net/production/data/static/gui/img/pergament_mid.png");
+         background-size: contain;
+         padding: 60px;
+         padding-top: 1px;
+         }
+         a {
+         color: #4E4B47;
+         }
+         img { max-width: 580px; width: 100%; margin: 0 auto; display: inherit;}
+         .letter p {font-size: 18px;}
+         h2 { font-size: 40px; font-weight:400; color: #56370e; line-height: 140%; border-bottom: 1px solid #ab9365; font-family: "Belleza", serif; margin: 20px 0; margin-top: 0;}
+    
+         h4.thanks { font-size: 14px; font-style: italic }
+         /* Form */
+         input { color: black; font-size: 16px; outline: 0; background: rgba(255, 255, 255, 0.6);}
+         form { position: relative; width: 100%; text-align: center; font-family: "Open Sans", sans-serif;}
+        .letter {text-align:center;}
+         div#id_captcha div:first-child {    width: 100%!important;}
+         form {text-align: center;}
+         form input[type="text"], .register select, form input[type="password"], form input[type="email"] { font-family: Arial, sans-serif; border: 1px solid #9E6F49;  width: 260px; padding: 12px; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -ms-transition: all 0.2s ease; -o-transition: all 0.2s ease; margin-bottom: 20px; transition: all 0.2s ease;}
+         form input[type="text"], form input[type="password"] {-webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -ms-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; }
+         input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {background: rgba(255, 255, 255, 0.6)!important;}
+         form input[type="text"].ng-invalid.ng-dirty {border: 1px solid #D83A3A; box-shadow: 0 0 7px rgba(218, 68, 68, 0.2); }
+         form input[type="text"]:focus,
+         form input[type="password"]:focus,
+         form input[type="email"]:focus,
+         .register select:focus{outline: 0; box-shadow: 0 0 10px black; box-shadow: 0 0 8px rgba(62, 31, 5, 0.15); background: rgba(255, 255, 255, 0.65); border-color: #B14B23;}
+         form input {display: inline-block;}
+         form input[type="checkbox"] {	-webkit-appearance: none; -moz-appearance:none;  background-color: #F1E9D6; border: 1px solid #9E6F49; box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05); padding: 10px; border-radius: 0; display: inline-block; position: relative;}
+         form input[type="checkbox"]:checked { background-color: #fafafa; border: 1px solid #AD7045; box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1); color: #99a1a7;}
+         form input[type="checkbox"]:checked:after { content: '\2716'; font-size: 14px; position: absolute; top: 0px; left: 4px; color: #B76747;}
+         form input[type="checkbox"]:focus {outline: 0; box-shadow: 0 0 10px black; box-shadow: 0 0 8px rgba(62, 31, 5, 0.15); border-color: #B14B23;}
+         form input[type="submit"] {display: block; font-family: "Belleza", serif; width: auto; margin:0 auto; padding: 15px 30px; background-color: rgba(255, 255, 255, 0.25);background-size: 40px;border: 1px solid #6F4008;font-family: "Belleza", serif;font-size: 26px;color: #6F4008;cursor: pointer;}
+         form input[type="submit"]:hover { background: url("../img/button_registration_white.png") no-repeat 15px; background-color: rgb(95, 58, 33); background-size: 40px; color: white; border:1px solid rgba(255, 255, 255, 0); }
+         form input[type="submit"]:focus { outline: none; }
+         form input[type="text"].ff_state {position: relative; top:-15px;}
+         form select {padding: 10px; width:261px;}
+         form option {padding: 10px;}
+         form .errorlist { background: #b32c2c; width: 100%; list-style: none; display: inline-block; color: white; padding: 6px 10px;}
+         form .helptext {display: inline-block; color: #b32c2c; margin-bottom:15px; font-size: 16px; padding: 10px 15px; line-height: 130%; width: 100%; box-sizing: border-box; }
+         form .g-recaptcha {margin-bottom: 15px;}
+         form .line {margin-bottom: 15px; position: relative;}
+         form .line::after { content: "."; clear: both; display: block; visibility: hidden; height: 0px;}
+         form .block {position: relative; display: inline-block; width: 49%; float:left;}
+         form .block.has-error input[type="text"],
+         form .block.has-error input[type="password"] {border:2px solid #b32c2c;}
+         form .block.has-error textarea {border:2px solid #b32c2c;}
+         form .block .form-error {background: #b32c2c; display: inline-block; color: white; font-size: 12px; padding: 6px 10px; line-height: 130%; position: absolute; right: 37px; top: -12px;}
+         form label {display: inline-block; width: 100px; color: #56370e; }
+         form .check {position: relative;}
+         form .check.has-error input[type="checkbox"] {border: 2px solid #b32c2c;}
+         form .check label {width:500px; margin-left: 15px; margin-top:3px; }
+         form .check input {float:left;}
+         form .check.has-error .form-error {background: #b32c2c; color: white; font-size: 12px; padding: 1px 10px; position: absolute; right: 0; top: 0;}
+         form .captcha-error {background: #b32c2c; color: white; font-size: 12px; padding: 1px 10px; position: absolute; right: 0; top: 0;}
+         form hr {height:1px; background: #C3AC7F; border: none; margin: 25px 0;}
+         form textarea { padding: 9px; width:260px; height: 90px; font-family: "Open Sans", sans-serif; color: black; font-size: 14px; border: 1px solid #9E6F49; outline: 0; background: rgba(255, 255, 255, 0.6);}
+         form .textarea label {vertical-align: top; margin-top:10px;}
+         .picker__holder {outline:none!important;}
+         .alert.alert-danger { background: #802727; color: #f3faff; padding: 12px; margin-bottom: 10px; font-size: 18px; }
+        form input { display: inline-block; }
+        form label { display: inline-block; width: 20%; color: #56370e; float: left; }
+        
+        @media all and (max-width:1070px){
+          img.top_img { display: none; margin: 0;}
+          img.bottom_img { display: none;}
+          div.letter { width: 100%; max-width: 100%; margin: 0; padding: 0; background: #F5E6C1; height: 100%;}
+          .letter form label { width: 100%;}
+          .container .letter form input { width: 58%; float: inherit;}
+          body { margin: 0;}
+          form {padding: 20px;}
+          html body { background-image: none; background-color: #f5e6c1;}
+        }
+        .grecaptcha-badge{
+          display:none;
+        }
+                
+      </style>
+</body>
+</html>

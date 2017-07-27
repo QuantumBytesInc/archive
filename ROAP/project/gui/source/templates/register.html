@@ -1,0 +1,123 @@
+<div class="content" ng-controller="registerController" ng-init="init()">
+    <div class="top_img"></div>
+    <div class="bottom_img"></div>
+    <div class="inner">
+        <sidebar></sidebar>
+        <div class="right">
+            <h1>{{pageTitle}}</h1>
+            <div class="register">
+                <div class="formResponse" ng-show="showFormResponse">
+                    <h2>{{formResponse.title}}</h2>
+                    <p class="subtitle">{{ formResponse.subtitle }}</p>
+                </div>
+                <form ng-hide="showFormResponse" id="roa_register_form" method="POST">
+                    <h3>Account</h3>
+                    <div class="line">
+                        <div class="block">
+                            <label for="firstname">First Name *</label>
+                            <input ng-model="myFields.firstname" data-validation="required" type="text"
+                                   name="FIRST_NAME" id="firstname" placeholder="First Name">
+                        </div>
+                        <div class="block">
+                            <label for="lastname">Last Name *</label>
+                            <input ng-model="myFields.lastname" data-validation="required" type="text" name="LAST_NAME"
+                                   id="lastname" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="block">
+                            <label for="username">Username *</label>
+                            <input ng-model="myFields.username" data-validation="required" type="text" name="USERNAME"
+                                   id="username" placeholder="Username">
+                        </div>
+                        <div class="block">
+                            <label for="email">Email *</label>
+                            <input ng-model="myFields.email" data-validation="required" type="text" name="EMAIL"
+                                   id="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <hr>
+                    <h3>Address</h3>
+                    <div class="line">
+                        <div class="block">
+                            <label for="street">Street *</label>
+                            <input ng-model="myFields.street" data-validation="required" type="text" name="STREET"
+                                   id="street" placeholder="Street">
+                        </div>
+                        <div class="block">
+                            <label for="city">City *</label>
+                            <input ng-model="myFields.city" data-validation="required" type="text" name="CITY" id="city"
+                                   placeholder="City">
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="block">
+                            <label for="zip">Zip-Code *</label>
+                            <input ng-model="myFields.zip" data-validation="required" type="text" name="ZIPCODE"
+                                   id="zip" placeholder="Zip-Code">
+                        </div>
+                        <div class="block">
+                            <label for="state">State / Region *</label>
+                            <input class="ff_state" ng-model="myFields.state" data-validation="required" type="text"
+                                   name="STATE" id="state" placeholder="State/Region">
+                        </div>
+                    </div>
+                    <hr>
+                    <h3>Additional Information</h3>
+                    <div class="line">
+                        <div class="block">
+                            <label for="gender">Gender</label>
+                            <select ng-init="myFields.sex = 'FEM'" ng-model="myFields.sex" name="SEX" id="gender"
+                                    placeholder="gender">
+                                <option value="FEM">Female</option>
+                                <option value="MAL">Male</option>
+                            </select>
+                        </div>
+                        <div class="block">
+                            <label for="language">Language</label>
+                            <!--<select ng-model="myFields.language" name="LANGUAGE" id="language" placeholder="language">
+                              <option ng-selected="lang.KEY == 'en'" ng-repeat="lang in languages" ng-value="lang.KEY">{{lang.VALUE}}</option>
+                           </select>-->
+                            <select ng-options="lang.KEY as lang.VALUE for lang in languages"
+                                    ng-model="myFields.language" name="LANGUAGE" id="language">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="block">
+                            <label for="country">Country</label>
+                            <!--<select ng-model="myFields.country" name="COUNTRY" id="country" placeholder="country">
+                                <option ng-selected="country.KEY == 'US'" ng-repeat="country in countries" ng-value="country.KEY">{{country.VALUE}}</option>
+                            </select>-->
+                            <select ng-options="country.KEY as country.VALUE for country in countries"
+                                    ng-model="myFields.country" name="COUNTRY" id="country">
+                            </select>
+                        </div>
+                        <div class="block">
+                            <label for="birthdate">Birth Date</label>
+                            <input ng-model="myFields.birthdate" data-validation="required" class="date_input"
+                                   type="text" name="BIRTH_DATE" id="birthdate" placeholder="Birthdate">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="line">
+                        <div class="check">
+                            <label for="checks">I have reached the age of majority and have read and agreed with the <a
+                                    target="_blank" href="/privacy-policy/">Privacy Policy</a> aswell with the <a
+                                    target="_blank" href="/non-disclosure-agreement/">Non-disclosure
+                                agreement</a></label>
+                            <input ng-model="myFields.prerequisites" data-validation="required" name="PREREQUISITES"
+                                   type="checkbox" id="checks">
+                        </div>
+                    </div>
+                    <hr>
+<div  id="id_captcha"></div>
+
+
+                    <input type="submit" class="animate" value="Submit Registration"/>
+                </form>
+            </div>
+        </div>
+        <hr class="clear">
+    </div>
+</div>

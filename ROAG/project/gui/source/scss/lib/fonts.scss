@@ -1,0 +1,17 @@
+@import 'helper';
+$font-style: normal;
+$font-family: 'Ubuntu';
+$font-weight: 400;
+@font-face {
+  font-family:$font-family;
+  font-style: $font-style;
+  font-weight : $font-weight;
+  src: local('Ubuntu'), url($amazonUrl + '/fonts/ubuntuFont.woff') format('woff');
+
+}
+
+$font-stack : Ubuntu;
+$font-stack-headline : bold 1rem $font-stack;
+$font-stack-subline : bold 0.875rem $font-stack;
+$font-stack-text : 0.875rem $font-stack;
+$font-html-size: 62.5%;

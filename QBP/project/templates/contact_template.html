@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block content %}
+  <h1>{% placeholder "site title" %}</h1>
+  <div class="roa_sub">
+    <div class="left">
+      <div class="form_success">
+        {% placeholder "form success" %}
+      </div>
+      
+      <div class="form_notification form_error_email">
+        {% placeholder "form error email" %}
+      </div>
+      
+      <div class="form_notification form_error_technical">
+        {% placeholder "form error technical" %}
+      </div>
+      
+      <div class="form_wrapper">
+        <h2>{% placeholder "form title" %}</h2>
+        <form class="suprform">
+            <div class="line">
+              <label for="name">Name</label>
+              <input class="name" type="text" name="name">
+            </div>
+            <div class="line">
+              <label for="email">E-Mail</label>
+              <input class="email" type="text" name="email">
+            </div>
+            <div class="line textarea">
+              <label for="message">Message</label>
+              <textarea class="message" name="message"></textarea>
+            </div>
+            <div class="submit-btn">Send message</div>
+            {% csrf_token %}
+        </form>
+      </div>
+      
+    </div>
+    
+    <div class="right">
+      {% placeholder "content right" %}
+    </div>
+    <hr class="clear">
+  </div>
+{% endblock content %}

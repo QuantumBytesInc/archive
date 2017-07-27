@@ -1,0 +1,27 @@
+@import '../lib/helper';
+.view_ESC_MENU_container
+{
+     background-image:url($amazonUrl + '/img/esc/escmenu_bg.png');
+    background-repeat:none;
+    width:411px;height:93px
+}
+
+
+.view_ESC_MENU_container .buttonContainer
+{
+
+position: absolute;
+margin-left: 0.875em;
+margin-top: 1.250em;
+width: 374px;
+}
+
+.view_ESC_MENU_container .container
+{
+display: table;
+margin: 0 auto;
+    padding-top:0.125em;
+}
+
+
+

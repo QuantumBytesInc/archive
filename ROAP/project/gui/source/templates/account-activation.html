@@ -1,0 +1,25 @@
+<div class="content" ng-controller="accountActivationController" ng-init="init()">
+    <div class="top_img"></div>
+    <div class="bottom_img"></div>
+   <div class="inner">
+       <sidebar></sidebar>
+       <div class="right">
+            <h1>{{pageTitle}}</h1>
+            <form action="account-activation" method="post" id="roa_account_activation_form">
+               <h3>Password</h3>
+                <div class="line">
+                   <div class="block">
+                       <label for="password_confirmation">Please provide your password</label>
+                       <input data-validation="required" type="password" name="password" id="password" placeholder="Password">
+                   </div>
+                   <div class="block">
+                       <label for="password">Please provide your password again</label>
+                       <input data-validation="required" type="password" name="passwordConfirmation" id="password_confirmation" placeholder="Password">
+                   </div>
+                </div>
+                <hr>
+                <input type="submit" class="animate support" value="Activate my account">
+            </form>
+        </div>
+    </div>
+</div>

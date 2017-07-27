@@ -1,0 +1,167 @@
+@import '../../../lib/sprites';
+@import '../../../lib/helper';
+$charselection_bg: $amazonUrl + '/img/state/game/charSelection/charselection_bg.png';
+
+.view_CHAR_SELECTION {
+  .container {
+    background-image: url($charselection_bg);
+    width: 367px;
+    height: 529px;
+    z-index: 1;
+    position: relative;
+  }
+  .selectionHeadline {
+    margin: 0 auto;
+    padding-top: 1.5em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+  }
+
+  //Inherits all characters.
+  .characterBoxContainer {
+    position: absolute;
+    margin-top: 3.6em;
+    margin-left: 1.45em;
+    .box {
+      display: inline-block;
+      .spacerCharSel {
+        background-image: url($doubleRuler_bg);
+        background-repeat-x: initial;
+        width: 327px;
+        height: $doubleRuler_height;
+        margin-left: -5.2em;
+        margin-top: 2em;
+      }
+
+      .avatar {
+        cursor: default;
+        margin-left: 0.3em;
+        margin-top: 0.750em;
+        float: left;
+      }
+
+      .name {
+        cursor: default;
+        font-size: 1.5rem;/*24px*/
+        /*padding-top: 0.3em;*/
+        padding-left: 0.208em;
+      }
+
+      .region {
+        cursor: default;
+        margin-left: 0.313em;
+        margin-top: -0.313em;
+      }
+
+      .guild {
+        cursor: default;
+        padding-left: 0.313em;
+        color: #512000;
+      }
+
+      .information {
+        cursor: default;
+        float: left;
+        margin-left: 0.313em;
+        /*margin-top: 0.125em;*/
+        .infoStrip {
+           margin-top: 0.3em;
+          div {
+            margin-left: 0.625em;
+            top: 0.5em;
+            span {
+              display: block;
+              float: left;
+              margin-right: 0.3em;
+            }
+            img {
+                margin-right: 0.938em;
+              display: inline-block;
+              float: left;
+            }
+               
+          }
+        }
+      }
+
+    }
+
+    .box.selected {
+      background: rgba(213, 182, 116, 0.6);
+    }
+    .box:hover {
+      animation-name: anim_characterSelectionHover;
+      animation-duration: 1s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      -webkit-animation-name: anim_characterSelectionHover;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-direction: alternate;
+      -webkit-animation-iteration-count: infinite;
+    }
+
+  }
+
+  .spacer_top {
+    background-image: url($amazonUrl + '/img/doubleruler.png');
+    background-repeat-x: initial;
+    width: 330px;
+    height: 3px;
+    margin-left: 1.21428571em;
+    margin-top: 3.3em;
+    position: absolute;
+  }
+  .spacer {
+    background-image: url($amazonUrl + '/img/doubleruler.png');
+    background-repeat-x: initial;
+    width: 327px;
+    height: 3px;
+    margin-left:0.2em;
+
+    
+
+  }
+
+  .bottom {
+    position: absolute;
+    display: inline;
+    top: 23.5em;
+    width: 330px;
+    margin-left: 1.2em;
+    text-align: center;
+
+    .row1 {
+      position: relative;
+      top: 0.313em;
+    }
+    .row2 {
+      margin-left: -0.938em;
+      position: relative;
+
+    }
+  }
+
+}
+
+@keyframes anim_characterSelectionHover {
+  0% {
+    background: rgba(213, 182, 116, 0.6);
+  }
+
+  100% {
+    background: rgba(194, 159, 72, 0.3);
+  }
+}
+
+@-webkit-keyframes anim_characterSelectionHover {
+  0% {
+    background: rgba(213, 182, 116, 0.6);
+  }
+
+  100% {
+    background: rgba(194, 159, 72, 0.3);
+  }
+}

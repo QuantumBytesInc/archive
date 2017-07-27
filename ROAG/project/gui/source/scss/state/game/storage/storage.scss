@@ -1,0 +1,189 @@
+@import '../../../lib/helper';
+.view_STORAGE {
+  storage {
+    /*Hack else we woudln't get our positions in js*/
+    visibility: hidden;
+    position: absolute;
+    .controlBar {
+      height: 30px;
+      position: absolute;
+      right: 1em;
+      z-index: 1;
+      .btn {
+        float: right;
+      }
+      .close {
+        background: url($amazonUrl + "/img/state/game/chat/gui_minimize_close.png") no-repeat -50px 0;
+        width: 23px;
+        height: 30px;
+      }
+      .toggle {
+        background: url($amazonUrl + "/img/state/game/chat/gui_minimize_close.png") no-repeat 0 0;
+        width: 22px;
+        height: 30px;
+      }
+    }
+    //Name of bank and pages inheritance
+    .bankInformation {
+      position: absolute;
+
+      .title {
+        .headline {
+          text-transform: uppercase;
+          position: absolute;
+          display: block;
+          color: #4e2112;
+          left: 72px;
+          top: 18px;
+          width:300px;
+        }
+        .subline {
+          text-transform: uppercase;
+          position: absolute;
+          display: block;
+          color: #7d3b25;
+          left: 72px;
+          top: 38px;
+          width:300px;
+        }
+      }
+
+      .money {
+        position: absolute;
+
+        .gold {
+          position: absolute;
+          display: block;
+          color: #7d3b25;
+          left: 495px;
+          top: 18px;
+        }
+        .silver {
+          position: absolute;
+          display: block;
+          color: #7d3b25;
+          left: 530px;
+          top: 18px;
+        }
+        .bronze {
+          position: absolute;
+          display: block;
+          color: #7d3b25;
+          left: 565px;
+          top: 18px;
+        }
+      }
+
+      .pages {
+        position: absolute;
+        .one {
+          position: absolute;
+          display: block;
+          left: 545px;
+           top: 38px;
+
+        }
+        .two {
+         position: absolute;
+          display: block;
+          left: 558px;
+          top: 38px;
+
+        }
+        .three {
+    position: absolute;
+          display: block;
+          left: 573px;
+           top: 38px;
+
+        }
+        .four {
+    position: absolute;
+          display: block;
+          left: 584px;
+          top: 38px;
+        }
+
+      }
+
+    }
+    .itemseparator-container {
+      z-index: 99999;
+      color: black;
+    }
+
+    .split-split:hover {
+      background: rgba(32, 160, 56, 0.7);
+    }
+
+    .split-cancel:hover {
+      background: rgba(172, 61, 56, 0.7);
+    }
+
+    input[type=button] {
+      background: rgba(234, 136, 61, 0.8);
+      float: left;
+    }
+
+    input[type=number], input[type=number] {
+      background: rgba(234, 136, 61, 0.8);
+      float: left;
+      width: 100px;
+    }
+
+    input[type=number]:hover {
+      background: rgba(234, 136, 61, 0.9);
+    }
+  }
+  storage.hide {
+    visibility: hidden;
+  }
+  storage.show {
+    visibility: visible;
+  }
+
+  storage [data-id='storage'].storageVisible {
+    visibility: visible;
+  }
+  storage [data-id='storage'].storageNotVisible {
+    visibility: hidden;
+  }
+
+  storage.hide [data-id='storage'].storageVisible {
+    visibility: hidden !important;
+  }
+  chat-tab-ctrl .close:hover {
+    background: url($amazonUrl + "/img/state/game/chat/gui_minimize_close.png") no-repeat -50px -50px;
+  }
+  chat-tab-ctrl .toggle:hover {
+    background: url($amazonUrl + "/img/state/game/chat/gui_minimize_close.png") no-repeat 0 -50px;
+  }
+
+  storage table[data-id='storage'] tr td{
+    background-image:url($amazonUrl + '/img/controls/storage/itemslot_empty.png');
+    background-repeat:no-repeat;
+  }
+
+  table {
+    border: none;
+    tr, td {
+      height: 58px;
+      width: 58px;
+      /*NEVER TOUCH THIS LINES - else positioning wouldn't be posible. on startup*/
+      min-height: 58px;
+      min-width: 58px;
+    }
+  }
+
+  td.hover-enabled {
+    background-color: rgba(54, 255, 0, 0.16) !important;
+  }
+  td.hover-disabled {
+    background-color: rgba(255, 0, 0, 0.25) !important;
+  }
+  td.dropped {
+    background-color: rgba(0, 0, 0, 0.21);
+  }
+
+}
+

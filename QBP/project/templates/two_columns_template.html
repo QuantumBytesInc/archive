@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block content %}
+  <h1>{% placeholder "site title" %}</h1>
+  <div class="roa_sub">
+    <div class="left">
+      {% placeholder "content left" %}
+    </div>
+    <div class="right">
+      {% placeholder "content right" %}
+    </div>
+    <hr class="clear">
+  </div>
+{% endblock content %}
+

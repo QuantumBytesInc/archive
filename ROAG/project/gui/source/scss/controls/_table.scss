@@ -1,0 +1,70 @@
+
+/*  ------------------------------------------------
+    TABLE STYLING
+    ------------------------------------------------  */
+$nav1-primary-color: #a46918;
+$nav1-secondary-color: #cfab5e;
+#hor-minimalist-b {
+  //	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  //	font-size: 12px;
+  //	background: #fff;
+  margin: 10px;
+  width: 550px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+#hor-minimalist-b th {
+  font-size: 14px;
+  font-weight: normal;
+  color: black;
+  padding: 10px 8px;
+  border-bottom: 2px solid $nav1-primary-color;
+}
+
+#hor-minimalist-b td {
+  border-bottom: 1px solid $nav1-primary-color;
+  color: black;
+  padding: 6px 8px;
+}
+
+#hor-minimalist-b tbody tr:hover td {
+  //background: rgba(213, 182, 116, 0.4);
+  animation-name: tbodybybghv;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: tbodybybghv;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+}
+
+#hor-minimalist-b tbody tr td:nth-child(2) {
+
+  width: 100px;
+}
+
+@keyframes tbodybybghv {
+  0% {
+    background: rgba(213, 182, 116, 0.6);
+  }
+  100% {
+    background: rgba(194, 159, 72, 0.3);
+  }
+}
+
+@-webkit-keyframes tbodybybghv {
+  0% {
+    background: rgba(213, 182, 116, 0.6);
+  }
+  100% {
+    background: rgba(194, 159, 72, 0.3);
+  }
+}
+
+
+
+
+

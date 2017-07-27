@@ -1,0 +1,39 @@
+<b>Paragraph I.</b>
+<p>Persons entrusted with confidential information and service providers agree to treat
+in the strictest confidence mutually communicated proprietary data and information on
+forum posts, wiki entries, Mantis entries, incoming mail, correspondence, telephone
+calls, information from customer visits and on their status, in particular in connection
+with new developments, presentations, experiments and discussions. This applies in
+particular to information regarding business correspondence from customers and clients
+of the service provider. Both contracting partners shall undertake all necessary measures
+to prevent third parties from gaining unauthorized knowledge thereof.</p>
+<br>
+<b>Paragraph II.</b>
+<p>The person entrusted with confidential information agrees not to transmit mutually disclosed
+information to third parties, not to document / record / communicate such information outside
+of the company, and/or to exploit that information themselves without express written consent.</p>
+<br>
+<b>Paragraph III.</b>
+<p>The parties will immediately return all documents that they have received from one another in
+connection with the development, etc. at the end of the confidentiality agreement. Any files
+that are created and all copies will be deleted from all data storage devices.</p>
+<br>
+<b>Paragraph IV.</b>
+<p>The obligation to maintain confidentiality does not apply to information that is already
+public knowledge (with the exception of non-public, password protected access areas) and to
+developments that are already prior art, and therefore no longer eligible for protection.</p>
+<br>
+<b>Paragraph V.</b>
+<p>Irrespective of any potential claim for damages, the person entrusted with confidential
+information agrees to pay a contractual penalty in an amount of Euro 10,000 for each breach
+of this agreement.</p>
+<br>
+<b>Paragraph VI.</b>
+<p>The parties agree that Basel, Switzerland shall be the exclusive court of jurisdiction
+for all disputes arising from this agreement.</p>
+<br>
+<b>Paragraph VII.</b>
+<p>If one or more provisions of this agreement prove to be legally invalid, the validity
+of all other provisions shall remain thereby unaffected. The invalid provision shall be
+replaced as soon as possible by another provision that reflects as closely as possible the
+financial intent of the legally invalidated provision.</p>

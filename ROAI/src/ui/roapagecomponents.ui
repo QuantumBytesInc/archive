@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ROAPageComponents</class>
+ <widget class="QWidget" name="ROAPageComponents">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>520</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>520</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>520</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Modern Antiqua</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border: 0px;
+color: rgb(0, 0, 0);</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>520</width>
+     <height>162</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Ubuntu</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(216, 216, 216);</string>
+   </property>
+   <layout class="QVBoxLayout" name="vlCheckBoxes">
+    <item>
+     <widget class="QCheckBox" name="cbLauncher">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>The Relics of Annorath Launcher</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(216, 216, 216);</string>
+      </property>
+      <property name="text">
+       <string>Relics of Annorath Launcher</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="cbMSVC">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>MSVC Runtime, if unsure please install</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(216, 216, 216);</string>
+      </property>
+      <property name="text">
+       <string>Visual C++ Redist</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="cbOAL">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>OpenAL runtime, needed for sound playback</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(216, 216, 216);</string>
+      </property>
+      <property name="text">
+       <string>OpenAL (Open Audio Library)</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="cbDesktop">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(216, 216, 216);</string>
+      </property>
+      <property name="text">
+       <string>Add desktop shortcut</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="cbMenuEntry">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(216, 216, 216);</string>
+      </property>
+      <property name="text">
+       <string>Add application menu entry</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

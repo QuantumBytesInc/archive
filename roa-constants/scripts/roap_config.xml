@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config version="1.0">
+    <callers>
+        <caller name="PORTAL">
+            <action name="NAVIGATION">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="NEWS">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="NEWS_ENTRY">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="NOT_FOUND"/>
+                <result_code name="MISSING_DATA"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="FAQS">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="LANGUAGES">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="GET_LANGUAGE">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="SET_LANGUAGE">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="NOT_SUPPORTED"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+        <caller name="FEATURES">
+            <action name="OVERVIEW">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="FEATURE">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+        <caller name="CONTACT">
+            <action name="SEND_MAIL">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISSING_VALUES"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+        <caller name="CUSTOMER">
+            <action name="COUNTRIES">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="LANGUAGES">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="REGISTER">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_COUNTRY_NOT_FOUND"/>
+                <result_code name="FAILED_CITY_TO_LONG"/>
+                <result_code name="FAILED_CITY_EMPTY"/>
+                <result_code name="FAILED_CITY_INVALID"/>
+                <result_code name="FAILED_STATE_TO_LONG"/>
+                <result_code name="FAILED_STATE_EMPTY"/>
+                <result_code name="FAILED_STATE_INVALID"/>
+                <result_code name="FAILED_STREET_TO_LONG"/>
+                <result_code name="FAILED_STREET_EMPTY"/>
+                <result_code name="FAILED_STREET_INVALID"/>
+                <result_code name="FAILED_ZIPCODE_TO_LONG"/>
+                <result_code name="FAILED_ZIPCODE_EMPTY"/>
+                <result_code name="FAILED_ZIPCODE_INVALID"/>
+                <result_code name="FAILED_BIRTH_DATE_INVALID"/>
+                <result_code name="FAILED_SEX_INVALID"/>
+                <result_code name="FAILED_LANGUAGE_NOT_FOUND"/>
+                <result_code name="FAILED_PREREQUISITES_INVALID"/>
+                <result_code name="FAILED_CAPTCHA_INVALID"/>
+                <result_code name="FAILED_USERNAME_TO_LONG"/>
+                <result_code name="FAILED_USERNAME_EMPTY"/>
+                <result_code name="FAILED_USERNAME_INVALID"/>
+                <result_code name="FAILED_USERNAME_TAKEN"/>
+                <result_code name="FAILED_FIRST_NAME_TO_LONG"/>
+                <result_code name="FAILED_FIRST_NAME_EMPTY"/>
+                <result_code name="FAILED_FIRST_NAME_INVALID"/>
+                <result_code name="FAILED_LAST_NAME_TO_LONG"/>
+                <result_code name="FAILED_LAST_NAME_EMPTY"/>
+                <result_code name="FAILED_LAST_NAME_INVALID"/>
+                <result_code name="FAILED_EMAIL_INVALID"/>
+                <result_code name="FAILED_EMAIL_TAKEN"/>
+                <result_code name="FAILED_MISSING_VALUES"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+            <action name="MODIFY">
+              <result_code name="SUCCESSFULLY"/>
+              <result_code name="COUNTRY_NOT_FOUND"/>
+              <result_code name="CITY_TO_LONG"/>
+              <result_code name="CITY_EMPTY"/>
+              <result_code name="CITY_INVALID"/>
+              <result_code name="STATE_TO_LONG"/>
+              <result_code name="STATE_EMPTY"/>
+              <result_code name="STATE_INVALID"/>
+              <result_code name="STREET_TO_LONG"/>
+              <result_code name="STREET_EMPTY"/>
+              <result_code name="STREET_INVALID"/>
+              <result_code name="ZIPCODE_TO_LONG"/>
+              <result_code name="ZIPCODE_EMPTY"/>
+              <result_code name="ZIPCODE_INVALID"/>
+              <result_code name="BIRTH_DATE_INVALID"/>
+              <result_code name="SEX_INVALID"/>
+              <result_code name="LANGUAGE_NOT_FOUND"/>
+              <result_code name="PREREQUISITES_INVALID"/>
+              <result_code name="USERNAME_TO_LONG"/>
+              <result_code name="USERNAME_EMPTY"/>
+              <result_code name="USERNAME_INVALID"/>
+              <result_code name="USERNAME_TAKEN"/>
+              <result_code name="FIRST_NAME_TO_LONG"/>
+              <result_code name="FIRST_NAME_EMPTY"/>
+              <result_code name="FIRST_NAME_INVALID"/>
+              <result_code name="LAST_NAME_TO_LONG"/>
+              <result_code name="LAST_NAME_EMPTY"/>
+              <result_code name="LAST_NAME_INVALID"/>
+              <result_code name="EMAIL_INVALID"/>
+              <result_code name="EMAIL_TAKEN"/>
+              <result_code name="FAILED_MISC"/>
+              <result_code name="USER_NOT_FOUND"/>
+              <result_code name="NEEDS_REACTIVATION"/>
+              <result_code name="FAILED_NOT_LOGGED_IN"/>
+            </action>
+            <action name="DATA">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_USER_NOT_FOUND"/>
+                <result_code name="FAILED_NOT_LOGGED_IN"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+
+            <action name="AUTHENTICATED">
+                <result_code name="SUCCESSFULLY"/>
+                <result_code name="FAILED_MISSING_VALUES"/>
+                <result_code name="FAILED_BRUTE_FORCE_ATTEMPT"/>
+                <result_code name="FAILED_SERVER_DOWN"/>
+                <result_code name="FAILED_MAINTENANCE"/>
+                <result_code name="FAILED_MISC"/>
+            </action>
+        </caller>
+    </callers>
+    <global_errors>
+        <error name="ERROR_NOT_AUTHENTICATED"/>
+        <error name="ERROR_ACTION_UNKNOWN"/>
+        <error name="ERROR_CALLER_UNKNOWN"/>
+        <error name="ERROR_OBJECT_LOCKED"/>
+        <error name="ERROR_RATE_LIMIT"/>
+        <error name="ERROR_MISC_ERROR"/>
+        <error name="ERROR_SERVER_OFFLINE"/>
+    </global_errors>
+</config>

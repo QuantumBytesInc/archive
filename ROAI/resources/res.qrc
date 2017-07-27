@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>nda/nda_eng.txt</file>
+        <file>nda/nda_esp.txt</file>
+        <file>nda/nda_fra.txt</file>
+        <file>nda/nda_ger.txt</file>
+        <file>images/background.png</file>
+        <file>certs/class2.pem</file>
+        <file>certs/ca.pem</file>
+        <file>translations/roai_english.qm</file>
+        <file>translations/roai_french.qm</file>
+        <file>translations/roai_german.qm</file>
+        <file>translations/roai_greek.qm</file>
+        <file>translations/roai_italian.qm</file>
+        <file>translations/roai_polish.qm</file>
+        <file>translations/roai_portuguese.qm</file>
+        <file>translations/roai_spanish.qm</file>
+        <file>translations/roai_swedish.qm</file>
+        <file>fonts/Ubuntu-B.ttf</file>
+        <file>fonts/Ubuntu-BI.ttf</file>
+        <file>fonts/Ubuntu-C.ttf</file>
+        <file>fonts/Ubuntu-L.ttf</file>
+        <file>fonts/Ubuntu-LI.ttf</file>
+        <file>fonts/Ubuntu-M.ttf</file>
+        <file>fonts/Ubuntu-MI.ttf</file>
+        <file>fonts/Ubuntu-R.ttf</file>
+        <file>fonts/Ubuntu-RI.ttf</file>
+        <file>images/checkbox_checked.png</file>
+        <file>images/checkbox_unchecked.png</file>
+    </qresource>
+</RCC>

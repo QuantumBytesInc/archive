@@ -1,0 +1,17 @@
+{% extends "spirit/_base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Preferences" %}{% endblock %}
+
+{% block content %}
+
+    <h1 class="headline">{% trans "Preferences" %}</h1>
+
+    <dl class="preference">
+	   <dt class="preference-label">{% trans "Avatar" %}:</dt>
+	   <dd class="preference-desc"><a href="https://gravatar.com"><i class="fa fa-pencil"></i> {% trans "Change avatar" %}</a>
+           ({% trans "Go to gravatar.com and use your current email to change it" %})</dd>
+	</dl>
+
+{% endblock %}

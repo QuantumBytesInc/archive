@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+    {% blocktrans %}
+    Account activation successfully
+    {% endblocktrans %}
+{% endblock title %}
+
+{% block content %}
+    {% blocktrans %}
+    Your account has been successfully registered.
+    You will be forwarded to Getting Started in a few seconds.
+    If the automatic forwarding does not work, please
+    <a href="https://www.annorath-game.com/getting-started/">click here</a>.
+    {% endblocktrans %}
+    <script>
+        var timer = setTimeout(function() {
+            window.location='https://www.annorath-game.com/getting-started/'
+        }, 10000);
+    </script>
+{% endblock content %}
